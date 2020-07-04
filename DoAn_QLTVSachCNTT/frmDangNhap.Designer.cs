@@ -55,7 +55,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(192, 170);
+            this.label2.Location = new System.Drawing.Point(192, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 1;
@@ -65,21 +65,22 @@
             // 
             this.txtTenTK.Location = new System.Drawing.Point(330, 114);
             this.txtTenTK.Name = "txtTenTK";
-            this.txtTenTK.Size = new System.Drawing.Size(167, 22);
+            this.txtTenTK.Size = new System.Drawing.Size(215, 22);
             this.txtTenTK.TabIndex = 2;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(330, 167);
+            this.txtMatKhau.Location = new System.Drawing.Point(330, 164);
+            this.txtMatKhau.Multiline = true;
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(167, 22);
+            this.txtMatKhau.Size = new System.Drawing.Size(215, 22);
             this.txtMatKhau.TabIndex = 3;
             // 
             // chbPass
             // 
             this.chbPass.AutoSize = true;
             this.chbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbPass.Location = new System.Drawing.Point(330, 212);
+            this.chbPass.Location = new System.Drawing.Point(330, 219);
             this.chbPass.Name = "chbPass";
             this.chbPass.Size = new System.Drawing.Size(142, 21);
             this.chbPass.TabIndex = 4;
@@ -114,7 +115,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(121, 37);
+            this.label3.Location = new System.Drawing.Point(130, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(304, 29);
             this.label3.TabIndex = 7;
@@ -123,9 +124,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 117);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 114);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 140);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -147,6 +148,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

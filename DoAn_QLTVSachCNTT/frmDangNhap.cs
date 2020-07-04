@@ -23,5 +23,10 @@ namespace DoAn_QLTVSachCNTT
                 txtMatKhau.UseSystemPasswordChar = false;
             else txtMatKhau.UseSystemPasswordChar = true;
         }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+            txtMatKhau.UseSystemPasswordChar = true;
+        }
     }
 }
