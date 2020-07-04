@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace DoAn_QLTVSachCNTT
 {
-    public partial class Form1 : Form
+    public partial class frmDangNhap : Form
     {
-        public Form1()
+        public frmDangNhap()
         {
             InitializeComponent();
+        }
+
+        private void chbPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbPass.Checked)
+                txtMatKhau.UseSystemPasswordChar = false;
+            else txtMatKhau.UseSystemPasswordChar = true;
         }
     }
 }
