@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNCC));
             this.gTTNCC = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMaNCC = new System.Windows.Forms.TextBox();
-            this.txtTenNCC = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
             this.gThaoTac = new System.Windows.Forms.GroupBox();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
@@ -45,6 +37,14 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtTenNCC = new System.Windows.Forms.TextBox();
+            this.txtMaNCC = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.gTimKiem = new System.Windows.Forms.GroupBox();
             this.btnTimKiem = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -65,7 +65,6 @@
             // 
             // gTTNCC
             // 
-            this.gTTNCC.Controls.Add(this.gThaoTac);
             this.gTTNCC.Controls.Add(this.txtSDT);
             this.gTTNCC.Controls.Add(this.txtDiaChi);
             this.gTTNCC.Controls.Add(this.txtTenNCC);
@@ -77,75 +76,10 @@
             this.gTTNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTTNCC.Location = new System.Drawing.Point(12, 12);
             this.gTTNCC.Name = "gTTNCC";
-            this.gTTNCC.Size = new System.Drawing.Size(917, 238);
+            this.gTTNCC.Size = new System.Drawing.Size(670, 238);
             this.gTTNCC.TabIndex = 0;
             this.gTTNCC.TabStop = false;
             this.gTTNCC.Text = "Thông Tin Nhà Cung Cấp";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã Nhà Cung Cấp:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên Nhà Cung Cấp:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(382, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Địa Chỉ:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(102, 147);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "SĐT:";
-            // 
-            // txtMaNCC
-            // 
-            this.txtMaNCC.Location = new System.Drawing.Point(173, 47);
-            this.txtMaNCC.Name = "txtMaNCC";
-            this.txtMaNCC.Size = new System.Drawing.Size(100, 24);
-            this.txtMaNCC.TabIndex = 4;
-            // 
-            // txtTenNCC
-            // 
-            this.txtTenNCC.Location = new System.Drawing.Point(173, 99);
-            this.txtTenNCC.Name = "txtTenNCC";
-            this.txtTenNCC.Size = new System.Drawing.Size(194, 24);
-            this.txtTenNCC.TabIndex = 5;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(458, 47);
-            this.txtDiaChi.Multiline = true;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(205, 74);
-            this.txtDiaChi.TabIndex = 6;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(173, 144);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(142, 24);
-            this.txtSDT.TabIndex = 7;
             // 
             // gThaoTac
             // 
@@ -156,7 +90,7 @@
             this.gThaoTac.Controls.Add(this.btnLuu);
             this.gThaoTac.Controls.Add(this.btnThem);
             this.gThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gThaoTac.Location = new System.Drawing.Point(676, 15);
+            this.gThaoTac.Location = new System.Drawing.Point(688, 38);
             this.gThaoTac.Name = "gThaoTac";
             this.gThaoTac.Size = new System.Drawing.Size(227, 212);
             this.gThaoTac.TabIndex = 11;
@@ -171,6 +105,7 @@
             this.btnThoat.Size = new System.Drawing.Size(102, 51);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnSua
             // 
@@ -180,6 +115,7 @@
             this.btnSua.Size = new System.Drawing.Size(102, 51);
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnHuy
             // 
@@ -189,6 +125,7 @@
             this.btnHuy.Size = new System.Drawing.Size(102, 51);
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXoa
             // 
@@ -198,6 +135,7 @@
             this.btnXoa.Size = new System.Drawing.Size(102, 51);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -207,6 +145,7 @@
             this.btnLuu.Size = new System.Drawing.Size(102, 51);
             this.btnLuu.TabIndex = 1;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -216,6 +155,72 @@
             this.btnThem.Size = new System.Drawing.Size(102, 51);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(173, 144);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(142, 24);
+            this.txtSDT.TabIndex = 7;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(458, 47);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(205, 74);
+            this.txtDiaChi.TabIndex = 6;
+            // 
+            // txtTenNCC
+            // 
+            this.txtTenNCC.Location = new System.Drawing.Point(173, 99);
+            this.txtTenNCC.Name = "txtTenNCC";
+            this.txtTenNCC.Size = new System.Drawing.Size(194, 24);
+            this.txtTenNCC.TabIndex = 5;
+            // 
+            // txtMaNCC
+            // 
+            this.txtMaNCC.Location = new System.Drawing.Point(173, 47);
+            this.txtMaNCC.Name = "txtMaNCC";
+            this.txtMaNCC.Size = new System.Drawing.Size(100, 24);
+            this.txtMaNCC.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(102, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 18);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "SĐT:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(382, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 18);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Địa Chỉ:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên Nhà Cung Cấp:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã Nhà Cung Cấp:";
             // 
             // gTimKiem
             // 
@@ -239,6 +244,7 @@
             this.btnTimKiem.Size = new System.Drawing.Size(115, 43);
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -247,6 +253,8 @@
             this.txtTimKiem.Size = new System.Drawing.Size(250, 24);
             this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.Text = "Tìm Kiếm.....";
+            this.txtTimKiem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTimKiem_MouseClick);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // rdTheoTen
             // 
@@ -295,6 +303,7 @@
             this.dgvTTNCC.RowTemplate.Height = 24;
             this.dgvTTNCC.Size = new System.Drawing.Size(911, 223);
             this.dgvTTNCC.TabIndex = 13;
+            this.dgvTTNCC.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvTTNCC_DataBindingComplete);
             // 
             // STT
             // 
@@ -340,12 +349,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 599);
+            this.Controls.Add(this.gThaoTac);
             this.Controls.Add(this.dgvTTNCC);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.gTimKiem);
             this.Controls.Add(this.gTTNCC);
             this.Name = "frmNCC";
             this.Text = "Quản Lý Nhà Cung Cấp";
+            this.Load += new System.EventHandler(this.frmNCC_Load);
             this.gTTNCC.ResumeLayout(false);
             this.gTTNCC.PerformLayout();
             this.gThaoTac.ResumeLayout(false);

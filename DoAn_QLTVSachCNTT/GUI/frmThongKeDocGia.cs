@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAn_QLTVSachCNTT
 {
-    public partial class frmSach : Form
+    public partial class frmThongKeDocGia : Form
     {
-        public frmSach()
+        public frmThongKeDocGia()
         {
             InitializeComponent();
-        }
-
-        private void frmSach_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoiMatKhau));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.txtMKHT = new System.Windows.Forms.TextBox();
             this.txtMKM = new System.Windows.Forms.TextBox();
             this.txtNLMKM = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,21 +101,25 @@
             // 
             this.btnXacNhan.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnXacNhan.Appearance.Options.UseFont = true;
+            this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXacNhan.ImageOptions.Image")));
             this.btnXacNhan.Location = new System.Drawing.Point(131, 297);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(129, 40);
             this.btnXacNhan.TabIndex = 5;
             this.btnXacNhan.Text = "Xác Nhận";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnHuy
             // 
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
             this.btnHuy.Location = new System.Drawing.Point(320, 297);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(129, 40);
             this.btnHuy.TabIndex = 6;
             this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // txtMKHT
             // 
@@ -120,6 +127,7 @@
             this.txtMKHT.Name = "txtMKHT";
             this.txtMKHT.Size = new System.Drawing.Size(214, 22);
             this.txtMKHT.TabIndex = 7;
+            this.txtMKHT.UseSystemPasswordChar = true;
             // 
             // txtMKM
             // 
@@ -127,6 +135,7 @@
             this.txtMKM.Name = "txtMKM";
             this.txtMKM.Size = new System.Drawing.Size(214, 22);
             this.txtMKM.TabIndex = 8;
+            this.txtMKM.UseSystemPasswordChar = true;
             // 
             // txtNLMKM
             // 
@@ -134,6 +143,11 @@
             this.txtNLMKM.Name = "txtNLMKM";
             this.txtNLMKM.Size = new System.Drawing.Size(214, 22);
             this.txtNLMKM.TabIndex = 9;
+            this.txtNLMKM.UseSystemPasswordChar = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmDoiMatKhau
             // 
@@ -153,7 +167,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDoiMatKhau";
             this.Text = "Đổi Mật Khẩu";
-            this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +185,6 @@
         private System.Windows.Forms.TextBox txtMKM;
         private System.Windows.Forms.TextBox txtNLMKM;
         private System.Windows.Forms.CheckBox chbAll;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

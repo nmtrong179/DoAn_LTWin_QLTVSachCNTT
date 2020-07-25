@@ -37,7 +37,7 @@
             this.rdTheoTen = new System.Windows.Forms.RadioButton();
             this.rdTheoMa = new System.Windows.Forms.RadioButton();
             this.gTTThuThu = new System.Windows.Forms.GroupBox();
-            this.txtMaTK = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.txtChucVu = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,22 +61,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pThuThu = new DevExpress.XtraEditors.PictureEdit();
             this.btnChonHinh = new DevExpress.XtraEditors.SimpleButton();
+            this.pThuThu = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTThuThu)).BeginInit();
             this.gTimKiem.SuspendLayout();
             this.gTTThuThu.SuspendLayout();
             this.gThaoTac.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pThuThu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pThuThu)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -94,20 +95,21 @@
             this.dgvTTThuThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTTThuThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
-            this.MaDG,
-            this.TenDG,
+            this.MaTT,
+            this.TenTT,
             this.NgaySinh,
             this.GioiTinh,
             this.DiaChi,
             this.SDT,
             this.ChucVu,
-            this.MaTK});
+            this.ID});
             this.dgvTTThuThu.Location = new System.Drawing.Point(18, 380);
             this.dgvTTThuThu.Name = "dgvTTThuThu";
             this.dgvTTThuThu.RowHeadersWidth = 51;
             this.dgvTTThuThu.RowTemplate.Height = 24;
             this.dgvTTThuThu.Size = new System.Drawing.Size(1057, 206);
             this.dgvTTThuThu.TabIndex = 10;
+            this.dgvTTThuThu.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvTTThuThu_DataBindingComplete);
             // 
             // gTimKiem
             // 
@@ -131,6 +133,7 @@
             this.btnTimKiem.Size = new System.Drawing.Size(115, 43);
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -139,6 +142,8 @@
             this.txtTimKiem.Size = new System.Drawing.Size(250, 24);
             this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.Text = "Tìm Kiếm.....";
+            this.txtTimKiem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTimKiem_MouseClick);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // rdTheoTen
             // 
@@ -164,7 +169,8 @@
             // 
             // gTTThuThu
             // 
-            this.gTTThuThu.Controls.Add(this.txtMaTK);
+            this.gTTThuThu.Controls.Add(this.pThuThu);
+            this.gTTThuThu.Controls.Add(this.txtID);
             this.gTTThuThu.Controls.Add(this.txtChucVu);
             this.gTTThuThu.Controls.Add(this.label9);
             this.gTTThuThu.Controls.Add(this.label6);
@@ -175,33 +181,31 @@
             this.gTTThuThu.Controls.Add(this.txtDiaChi);
             this.gTTThuThu.Controls.Add(this.txtTenTT);
             this.gTTThuThu.Controls.Add(this.txtMaTT);
-            this.gTTThuThu.Controls.Add(this.gThaoTac);
             this.gTTThuThu.Controls.Add(this.label7);
             this.gTTThuThu.Controls.Add(this.label5);
             this.gTTThuThu.Controls.Add(this.label4);
             this.gTTThuThu.Controls.Add(this.label3);
             this.gTTThuThu.Controls.Add(this.label2);
             this.gTTThuThu.Controls.Add(this.label1);
-            this.gTTThuThu.Controls.Add(this.pThuThu);
             this.gTTThuThu.Controls.Add(this.btnChonHinh);
             this.gTTThuThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTTThuThu.Location = new System.Drawing.Point(12, 12);
             this.gTTThuThu.Name = "gTTThuThu";
-            this.gTTThuThu.Size = new System.Drawing.Size(1063, 248);
+            this.gTTThuThu.Size = new System.Drawing.Size(820, 248);
             this.gTTThuThu.TabIndex = 8;
             this.gTTThuThu.TabStop = false;
             this.gTTThuThu.Text = "Thông Tin Thủ Thư";
             // 
-            // txtMaTK
+            // txtID
             // 
-            this.txtMaTK.Location = new System.Drawing.Point(670, 169);
-            this.txtMaTK.Name = "txtMaTK";
-            this.txtMaTK.Size = new System.Drawing.Size(100, 24);
-            this.txtMaTK.TabIndex = 25;
+            this.txtID.Location = new System.Drawing.Point(670, 169);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 24);
+            this.txtID.TabIndex = 25;
             // 
             // txtChucVu
             // 
-            this.txtChucVu.Location = new System.Drawing.Point(474, 169);
+            this.txtChucVu.Location = new System.Drawing.Point(492, 169);
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.Size = new System.Drawing.Size(100, 24);
             this.txtChucVu.TabIndex = 24;
@@ -209,11 +213,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(608, 172);
+            this.label9.Location = new System.Drawing.Point(627, 172);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 18);
+            this.label9.Size = new System.Drawing.Size(26, 18);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Mã TK:";
+            this.label9.Text = "ID:";
             // 
             // label6
             // 
@@ -252,6 +256,7 @@
             this.rdNam.TabStop = true;
             this.rdNam.Text = "Nam";
             this.rdNam.UseVisualStyleBackColor = true;
+            this.rdNam.CheckedChanged += new System.EventHandler(this.rdNam_CheckedChanged);
             // 
             // dtNgaySinh
             // 
@@ -292,7 +297,7 @@
             this.gThaoTac.Controls.Add(this.btnLuu);
             this.gThaoTac.Controls.Add(this.btnThem);
             this.gThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gThaoTac.Location = new System.Drawing.Point(830, 12);
+            this.gThaoTac.Location = new System.Drawing.Point(838, 33);
             this.gThaoTac.Name = "gThaoTac";
             this.gThaoTac.Size = new System.Drawing.Size(227, 227);
             this.gThaoTac.TabIndex = 10;
@@ -307,6 +312,7 @@
             this.btnThoat.Size = new System.Drawing.Size(102, 51);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnSua
             // 
@@ -316,6 +322,7 @@
             this.btnSua.Size = new System.Drawing.Size(102, 51);
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnHuy
             // 
@@ -325,6 +332,7 @@
             this.btnHuy.Size = new System.Drawing.Size(102, 51);
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXoa
             // 
@@ -334,6 +342,7 @@
             this.btnXoa.Size = new System.Drawing.Size(102, 51);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -343,6 +352,7 @@
             this.btnLuu.Size = new System.Drawing.Size(102, 51);
             this.btnLuu.TabIndex = 1;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -352,6 +362,7 @@
             this.btnThem.Size = new System.Drawing.Size(102, 51);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label7
             // 
@@ -407,14 +418,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Mã Thủ Thư:";
             // 
-            // pThuThu
-            // 
-            this.pThuThu.Location = new System.Drawing.Point(6, 21);
-            this.pThuThu.Name = "pThuThu";
-            this.pThuThu.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pThuThu.Size = new System.Drawing.Size(136, 138);
-            this.pThuThu.TabIndex = 2;
-            // 
             // btnChonHinh
             // 
             this.btnChonHinh.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
@@ -425,6 +428,19 @@
             this.btnChonHinh.Size = new System.Drawing.Size(136, 47);
             this.btnChonHinh.TabIndex = 1;
             this.btnChonHinh.Text = "Chọn Hình";
+            this.btnChonHinh.Click += new System.EventHandler(this.btnChonHinh_Click);
+            // 
+            // pThuThu
+            // 
+            this.pThuThu.Location = new System.Drawing.Point(6, 25);
+            this.pThuThu.Name = "pThuThu";
+            this.pThuThu.Size = new System.Drawing.Size(136, 134);
+            this.pThuThu.TabIndex = 26;
+            this.pThuThu.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // STT
             // 
@@ -433,21 +449,21 @@
             this.STT.Name = "STT";
             this.STT.Width = 50;
             // 
-            // MaDG
+            // MaTT
             // 
-            this.MaDG.DataPropertyName = "MaDG";
-            this.MaDG.HeaderText = "Mã Độc Giả";
-            this.MaDG.MinimumWidth = 6;
-            this.MaDG.Name = "MaDG";
-            this.MaDG.Width = 70;
+            this.MaTT.DataPropertyName = "MaNV";
+            this.MaTT.HeaderText = "Mã Thủ Thư";
+            this.MaTT.MinimumWidth = 6;
+            this.MaTT.Name = "MaTT";
+            this.MaTT.Width = 70;
             // 
-            // TenDG
+            // TenTT
             // 
-            this.TenDG.DataPropertyName = "TenDG";
-            this.TenDG.HeaderText = "Tên Độc Giả";
-            this.TenDG.MinimumWidth = 6;
-            this.TenDG.Name = "TenDG";
-            this.TenDG.Width = 120;
+            this.TenTT.DataPropertyName = "HoTenNV";
+            this.TenTT.HeaderText = "Tên Thủ Thư";
+            this.TenTT.MinimumWidth = 6;
+            this.TenTT.Name = "TenTT";
+            this.TenTT.Width = 120;
             // 
             // NgaySinh
             // 
@@ -455,7 +471,7 @@
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.MinimumWidth = 6;
             this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.Width = 70;
+            this.NgaySinh.Width = 90;
             // 
             // GioiTinh
             // 
@@ -483,17 +499,19 @@
             // 
             // ChucVu
             // 
+            this.ChucVu.DataPropertyName = "ChucVu";
             this.ChucVu.HeaderText = "Chức Vụ";
             this.ChucVu.MinimumWidth = 6;
             this.ChucVu.Name = "ChucVu";
             this.ChucVu.Width = 80;
             // 
-            // MaTK
+            // ID
             // 
-            this.MaTK.HeaderText = "Mã TK";
-            this.MaTK.MinimumWidth = 6;
-            this.MaTK.Name = "MaTK";
-            this.MaTK.Width = 80;
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 80;
             // 
             // frmThuThu
             // 
@@ -504,15 +522,17 @@
             this.Controls.Add(this.dgvTTThuThu);
             this.Controls.Add(this.gTimKiem);
             this.Controls.Add(this.gTTThuThu);
+            this.Controls.Add(this.gThaoTac);
             this.Name = "frmThuThu";
             this.Text = "Quản Lý Thủ Thư";
+            this.Load += new System.EventHandler(this.frmThuThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTThuThu)).EndInit();
             this.gTimKiem.ResumeLayout(false);
             this.gTimKiem.PerformLayout();
             this.gTTThuThu.ResumeLayout(false);
             this.gTTThuThu.PerformLayout();
             this.gThaoTac.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pThuThu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pThuThu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -548,20 +568,21 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.PictureEdit pThuThu;
         private DevExpress.XtraEditors.SimpleButton btnChonHinh;
-        private System.Windows.Forms.TextBox txtMaTK;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pThuThu;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ChucVu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }

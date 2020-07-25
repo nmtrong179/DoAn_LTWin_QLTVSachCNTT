@@ -30,20 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSach));
             this.gTTSach = new System.Windows.Forms.GroupBox();
+            this.pSach = new System.Windows.Forms.PictureBox();
+            this.txtTheLoai = new System.Windows.Forms.TextBox();
             this.cbNCC = new System.Windows.Forms.ComboBox();
-            this.cbTheLoai = new System.Windows.Forms.ComboBox();
             this.nudSLTon = new System.Windows.Forms.NumericUpDown();
             this.txtNXB = new System.Windows.Forms.TextBox();
             this.txtTacGia = new System.Windows.Forms.TextBox();
             this.txtTenSach = new System.Windows.Forms.TextBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
-            this.gThaoTac = new System.Windows.Forms.GroupBox();
-            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,15 +45,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pSach = new DevExpress.XtraEditors.PictureEdit();
             this.btnChonHinh = new DevExpress.XtraEditors.SimpleButton();
+            this.gThaoTac = new System.Windows.Forms.GroupBox();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.gTimKiem = new System.Windows.Forms.GroupBox();
             this.btnTimKiem = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.rdTheoTen = new System.Windows.Forms.RadioButton();
             this.rdTheoMa = new System.Windows.Forms.RadioButton();
             this.dgvTTSach = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,24 +67,26 @@
             this.NCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SLTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gTTSach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSLTon)).BeginInit();
             this.gThaoTac.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pSach.Properties)).BeginInit();
             this.gTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTSach)).BeginInit();
             this.SuspendLayout();
             // 
             // gTTSach
             // 
+            this.gTTSach.Controls.Add(this.pSach);
+            this.gTTSach.Controls.Add(this.txtTheLoai);
             this.gTTSach.Controls.Add(this.cbNCC);
-            this.gTTSach.Controls.Add(this.cbTheLoai);
             this.gTTSach.Controls.Add(this.nudSLTon);
             this.gTTSach.Controls.Add(this.txtNXB);
             this.gTTSach.Controls.Add(this.txtTacGia);
             this.gTTSach.Controls.Add(this.txtTenSach);
             this.gTTSach.Controls.Add(this.txtMaSach);
-            this.gTTSach.Controls.Add(this.gThaoTac);
             this.gTTSach.Controls.Add(this.label7);
             this.gTTSach.Controls.Add(this.label6);
             this.gTTSach.Controls.Add(this.label5);
@@ -93,15 +94,29 @@
             this.gTTSach.Controls.Add(this.label3);
             this.gTTSach.Controls.Add(this.label2);
             this.gTTSach.Controls.Add(this.label1);
-            this.gTTSach.Controls.Add(this.pSach);
             this.gTTSach.Controls.Add(this.btnChonHinh);
             this.gTTSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTTSach.Location = new System.Drawing.Point(12, 12);
             this.gTTSach.Name = "gTTSach";
-            this.gTTSach.Size = new System.Drawing.Size(1063, 248);
+            this.gTTSach.Size = new System.Drawing.Size(828, 248);
             this.gTTSach.TabIndex = 0;
             this.gTTSach.TabStop = false;
             this.gTTSach.Text = "Thông Tin Sách";
+            // 
+            // pSach
+            // 
+            this.pSach.Location = new System.Drawing.Point(9, 25);
+            this.pSach.Name = "pSach";
+            this.pSach.Size = new System.Drawing.Size(133, 134);
+            this.pSach.TabIndex = 19;
+            this.pSach.TabStop = false;
+            // 
+            // txtTheLoai
+            // 
+            this.txtTheLoai.Location = new System.Drawing.Point(239, 133);
+            this.txtTheLoai.Name = "txtTheLoai";
+            this.txtTheLoai.Size = new System.Drawing.Size(211, 24);
+            this.txtTheLoai.TabIndex = 18;
             // 
             // cbNCC
             // 
@@ -110,14 +125,6 @@
             this.cbNCC.Name = "cbNCC";
             this.cbNCC.Size = new System.Drawing.Size(219, 26);
             this.cbNCC.TabIndex = 17;
-            // 
-            // cbTheLoai
-            // 
-            this.cbTheLoai.FormattingEnabled = true;
-            this.cbTheLoai.Location = new System.Drawing.Point(238, 133);
-            this.cbTheLoai.Name = "cbTheLoai";
-            this.cbTheLoai.Size = new System.Drawing.Size(121, 26);
-            this.cbTheLoai.TabIndex = 16;
             // 
             // nudSLTon
             // 
@@ -154,76 +161,6 @@
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.Size = new System.Drawing.Size(100, 24);
             this.txtMaSach.TabIndex = 11;
-            // 
-            // gThaoTac
-            // 
-            this.gThaoTac.Controls.Add(this.btnThoat);
-            this.gThaoTac.Controls.Add(this.btnSua);
-            this.gThaoTac.Controls.Add(this.btnHuy);
-            this.gThaoTac.Controls.Add(this.btnXoa);
-            this.gThaoTac.Controls.Add(this.btnLuu);
-            this.gThaoTac.Controls.Add(this.btnThem);
-            this.gThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gThaoTac.Location = new System.Drawing.Point(830, 12);
-            this.gThaoTac.Name = "gThaoTac";
-            this.gThaoTac.Size = new System.Drawing.Size(227, 227);
-            this.gThaoTac.TabIndex = 10;
-            this.gThaoTac.TabStop = false;
-            this.gThaoTac.Text = "Thao Tác";
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(119, 168);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(102, 51);
-            this.btnThoat.TabIndex = 5;
-            this.btnThoat.Text = "Thoát";
-            // 
-            // btnSua
-            // 
-            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(6, 168);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(102, 51);
-            this.btnSua.TabIndex = 4;
-            this.btnSua.Text = "Sửa";
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(119, 97);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(102, 51);
-            this.btnHuy.TabIndex = 3;
-            this.btnHuy.Text = "Huỷ";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(6, 97);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(102, 51);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Xoá";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(119, 29);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(102, 51);
-            this.btnLuu.TabIndex = 1;
-            this.btnLuu.Text = "Lưu";
-            // 
-            // btnThem
-            // 
-            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(6, 29);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(102, 51);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
             // 
             // label7
             // 
@@ -288,14 +225,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Mã Sách:";
             // 
-            // pSach
-            // 
-            this.pSach.Location = new System.Drawing.Point(6, 21);
-            this.pSach.Name = "pSach";
-            this.pSach.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pSach.Size = new System.Drawing.Size(136, 138);
-            this.pSach.TabIndex = 2;
-            // 
             // btnChonHinh
             // 
             this.btnChonHinh.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
@@ -306,6 +235,83 @@
             this.btnChonHinh.Size = new System.Drawing.Size(136, 47);
             this.btnChonHinh.TabIndex = 1;
             this.btnChonHinh.Text = "Chọn Hình";
+            this.btnChonHinh.Click += new System.EventHandler(this.btnChonHinh_Click);
+            // 
+            // gThaoTac
+            // 
+            this.gThaoTac.Controls.Add(this.btnThoat);
+            this.gThaoTac.Controls.Add(this.btnSua);
+            this.gThaoTac.Controls.Add(this.btnHuy);
+            this.gThaoTac.Controls.Add(this.btnXoa);
+            this.gThaoTac.Controls.Add(this.btnLuu);
+            this.gThaoTac.Controls.Add(this.btnThem);
+            this.gThaoTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gThaoTac.Location = new System.Drawing.Point(846, 33);
+            this.gThaoTac.Name = "gThaoTac";
+            this.gThaoTac.Size = new System.Drawing.Size(227, 227);
+            this.gThaoTac.TabIndex = 10;
+            this.gThaoTac.TabStop = false;
+            this.gThaoTac.Text = "Thao Tác";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(119, 168);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(102, 51);
+            this.btnThoat.TabIndex = 5;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(6, 168);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(102, 51);
+            this.btnSua.TabIndex = 4;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(119, 97);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(102, 51);
+            this.btnHuy.TabIndex = 3;
+            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(6, 97);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(102, 51);
+            this.btnXoa.TabIndex = 2;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(119, 29);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(102, 51);
+            this.btnLuu.TabIndex = 1;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThem.Location = new System.Drawing.Point(6, 29);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(102, 51);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // gTimKiem
             // 
@@ -329,6 +335,7 @@
             this.btnTimKiem.Size = new System.Drawing.Size(115, 43);
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -337,6 +344,8 @@
             this.txtTimKiem.Size = new System.Drawing.Size(250, 24);
             this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.Text = "Tìm Kiếm.....";
+            this.txtTimKiem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTimKiem_MouseClick);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // rdTheoTen
             // 
@@ -378,16 +387,7 @@
             this.dgvTTSach.RowTemplate.Height = 24;
             this.dgvTTSach.Size = new System.Drawing.Size(1057, 206);
             this.dgvTTSach.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(18, 357);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(213, 18);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Danh Sách Thông Tin Sách";
+            this.dgvTTSach.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvTTSach_DataBindingComplete);
             // 
             // STT
             // 
@@ -418,6 +418,7 @@
             this.TheLoai.HeaderText = "Thể Loại";
             this.TheLoai.MinimumWidth = 6;
             this.TheLoai.Name = "TheLoai";
+            this.TheLoai.Width = 125;
             // 
             // NXB
             // 
@@ -445,10 +446,25 @@
             // 
             // TacGia
             // 
+            this.TacGia.DataPropertyName = "TacGia";
             this.TacGia.HeaderText = "Tác Giả";
             this.TacGia.MinimumWidth = 6;
             this.TacGia.Name = "TacGia";
             this.TacGia.Width = 125;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(18, 357);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(213, 18);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Danh Sách Thông Tin Sách";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmSach
             // 
@@ -459,14 +475,15 @@
             this.Controls.Add(this.dgvTTSach);
             this.Controls.Add(this.gTimKiem);
             this.Controls.Add(this.gTTSach);
+            this.Controls.Add(this.gThaoTac);
             this.Name = "frmSach";
             this.Text = "Quản Lý Sách";
             this.Load += new System.EventHandler(this.frmSach_Load);
             this.gTTSach.ResumeLayout(false);
             this.gTTSach.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSLTon)).EndInit();
             this.gThaoTac.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pSach.Properties)).EndInit();
             this.gTimKiem.ResumeLayout(false);
             this.gTimKiem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTSach)).EndInit();
@@ -479,7 +496,6 @@
 
         private System.Windows.Forms.GroupBox gTTSach;
         private DevExpress.XtraEditors.SimpleButton btnChonHinh;
-        private DevExpress.XtraEditors.PictureEdit pSach;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -495,7 +511,6 @@
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.ComboBox cbNCC;
-        private System.Windows.Forms.ComboBox cbTheLoai;
         private System.Windows.Forms.NumericUpDown nudSLTon;
         private System.Windows.Forms.TextBox txtNXB;
         private System.Windows.Forms.TextBox txtTacGia;
@@ -516,5 +531,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLTon;
         private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
+        private System.Windows.Forms.TextBox txtTheLoai;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pSach;
     }
 }

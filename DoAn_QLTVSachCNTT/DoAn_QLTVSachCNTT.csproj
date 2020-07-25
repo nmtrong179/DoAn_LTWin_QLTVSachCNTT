@@ -40,6 +40,7 @@
     <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,16 +52,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DATA\XLBang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATA\XLCTPhieuMuon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATA\XLDocGia.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATA\XLNhaCungCap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATA\XLNhanVien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATA\XLPhieuMuon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATA\XLSach.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATA\XLTaiKhoan.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDocGia.cs">
+    <Compile Include="frmMuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDocGia.Designer.cs">
+    <Compile Include="frmMuonTra.Designer.cs">
+      <DependentUpon>frmMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDocGia.Designer.cs">
       <DependentUpon>frmDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDoiMatKhau.cs">
@@ -75,22 +106,40 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNCC.cs">
+    <Compile Include="GUI\frmNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNCC.Designer.cs">
+    <Compile Include="GUI\frmNCC.Designer.cs">
       <DependentUpon>frmNCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSach.cs">
+    <Compile Include="GUI\frmSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSach.Designer.cs">
+    <Compile Include="GUI\frmSach.Designer.cs">
       <DependentUpon>frmSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThuThu.cs">
+    <Compile Include="GUI\frmTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThuThu.Designer.cs">
+    <Compile Include="GUI\frmTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThongKeSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongKeSach.Designer.cs">
+      <DependentUpon>frmThongKeSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThongKeDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongKeDocGia.Designer.cs">
+      <DependentUpon>frmThongKeDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThuThu.Designer.cs">
       <DependentUpon>frmThuThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -98,7 +147,10 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDocGia.resx">
+    <EmbeddedResource Include="frmMuonTra.resx">
+      <DependentUpon>frmMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDocGia.resx">
       <DependentUpon>frmDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
@@ -107,13 +159,22 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNCC.resx">
+    <EmbeddedResource Include="GUI\frmNCC.resx">
       <DependentUpon>frmNCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSach.resx">
+    <EmbeddedResource Include="GUI\frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThuThu.resx">
+    <EmbeddedResource Include="GUI\frmTaiKhoan.resx">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongKeSach.resx">
+      <DependentUpon>frmThongKeSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongKeDocGia.resx">
+      <DependentUpon>frmThongKeDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThuThu.resx">
       <DependentUpon>frmThuThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -138,6 +199,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BUS\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

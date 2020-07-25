@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAn_QLTVSachCNTT
 {
-    public partial class frmThuThu : Form
+    public partial class frmMuonTra : Form
     {
-        public frmThuThu()
+        public frmMuonTra()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAn_QLTVSachCNTT
 {
-    public partial class frmDocGia : Form
+    public partial class frmTaiKhoan : Form
     {
-        public frmDocGia()
+        public frmTaiKhoan()
         {
             InitializeComponent();
         }
