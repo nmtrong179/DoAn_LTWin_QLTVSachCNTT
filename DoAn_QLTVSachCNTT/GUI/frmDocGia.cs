@@ -63,6 +63,7 @@ namespace DoAn_QLTVSachCNTT
             btnLuu.Enabled = capNhat;
             btnHuy.Enabled = capNhat;
             btnChonHinh.Enabled = capNhat;
+            dgvTTDocGia.Enabled = !capNhat;
         }
 
         private void dgvTTDocGia_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -114,12 +115,16 @@ namespace DoAn_QLTVSachCNTT
         private void btnSua_Click(object sender, EventArgs e)
         {
             capNhat = true;
+            txtMaDG.Enabled = false;
             enabledButton();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //Xu ly remove tabpage doi mat khau
+            TabPage p = (TabPage)this.Parent;
+            TabControl tabMain = (TabControl)p.Parent;
+            tabMain.TabPages.Remove(p);
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)

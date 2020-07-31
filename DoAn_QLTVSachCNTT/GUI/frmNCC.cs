@@ -105,7 +105,10 @@ namespace DoAn_QLTVSachCNTT
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //Xu ly remove tabpage doi mat khau
+            TabPage p = (TabPage)this.Parent;
+            TabControl tabMain = (TabControl)p.Parent;
+            tabMain.TabPages.Remove(p);
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)

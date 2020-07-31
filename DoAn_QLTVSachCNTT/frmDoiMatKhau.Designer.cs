@@ -89,7 +89,7 @@
             // 
             this.chbAll.AutoSize = true;
             this.chbAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbAll.Location = new System.Drawing.Point(278, 260);
+            this.chbAll.Location = new System.Drawing.Point(320, 258);
             this.chbAll.Name = "chbAll";
             this.chbAll.Size = new System.Drawing.Size(91, 21);
             this.chbAll.TabIndex = 4;
@@ -102,9 +102,9 @@
             this.btnXacNhan.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnXacNhan.Appearance.Options.UseFont = true;
             this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXacNhan.ImageOptions.Image")));
-            this.btnXacNhan.Location = new System.Drawing.Point(131, 297);
+            this.btnXacNhan.Location = new System.Drawing.Point(143, 297);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(129, 40);
+            this.btnXacNhan.Size = new System.Drawing.Size(129, 48);
             this.btnXacNhan.TabIndex = 5;
             this.btnXacNhan.Text = "Xác Nhận";
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
@@ -114,16 +114,16 @@
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(320, 297);
+            this.btnHuy.Location = new System.Drawing.Point(375, 297);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(129, 40);
+            this.btnHuy.Size = new System.Drawing.Size(129, 48);
             this.btnHuy.TabIndex = 6;
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // txtMKHT
             // 
-            this.txtMKHT.Location = new System.Drawing.Point(278, 119);
+            this.txtMKHT.Location = new System.Drawing.Point(320, 119);
             this.txtMKHT.Name = "txtMKHT";
             this.txtMKHT.Size = new System.Drawing.Size(214, 22);
             this.txtMKHT.TabIndex = 7;
@@ -131,7 +131,7 @@
             // 
             // txtMKM
             // 
-            this.txtMKM.Location = new System.Drawing.Point(278, 164);
+            this.txtMKM.Location = new System.Drawing.Point(320, 164);
             this.txtMKM.Name = "txtMKM";
             this.txtMKM.Size = new System.Drawing.Size(214, 22);
             this.txtMKM.TabIndex = 8;
@@ -139,7 +139,7 @@
             // 
             // txtNLMKM
             // 
-            this.txtNLMKM.Location = new System.Drawing.Point(278, 209);
+            this.txtNLMKM.Location = new System.Drawing.Point(320, 209);
             this.txtNLMKM.Name = "txtNLMKM";
             this.txtNLMKM.Size = new System.Drawing.Size(214, 22);
             this.txtNLMKM.TabIndex = 9;
@@ -154,7 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(576, 362);
+            this.ClientSize = new System.Drawing.Size(593, 406);
             this.Controls.Add(this.txtNLMKM);
             this.Controls.Add(this.txtMKM);
             this.Controls.Add(this.txtMKHT);
@@ -167,6 +167,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDoiMatKhau";
             this.Text = "Đổi Mật Khẩu";
+            this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

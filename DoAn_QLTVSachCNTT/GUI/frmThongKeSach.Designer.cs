@@ -267,7 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 501);
+            this.ClientSize = new System.Drawing.Size(1279, 420);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgvDSSQH);

@@ -470,7 +470,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 598);
+            this.ClientSize = new System.Drawing.Size(1279, 420);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvTTSach);
             this.Controls.Add(this.gTimKiem);

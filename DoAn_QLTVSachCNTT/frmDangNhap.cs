@@ -17,16 +17,18 @@ namespace DoAn_QLTVSachCNTT
 {
     public partial class frmDangNhap : Form
     {
-        public frmDangNhap()
-        {
-            InitializeComponent();
-        }
-
+        frmMain fMain = null;
         XLTaiKhoan tblTaiKhoan;
         XLNhanVien tblNhanVien;
         string[] tenTK = new string[5];
         int[] soLanDN = new int[5];
-        int n=0;
+        int n = 0;
+        //Construct coi tham so la frmMain
+        public frmDangNhap(frmMain pf)
+        {
+            fMain = pf;
+            InitializeComponent();
+        }
 
         private void chbPass_CheckedChanged(object sender, EventArgs e)
         {
@@ -61,13 +63,12 @@ namespace DoAn_QLTVSachCNTT
                             soLanDN[i] = 0;
                         }
                     }
-                    frmMain f = (frmMain)this.MdiParent;
-                    f.id = r[0]["ID"].ToString();
+                    fMain.id = r[0]["ID"].ToString();
                     tblNhanVien = new XLNhanVien();
-                    var k = tblNhanVien.Select("ID='" + f.id +"'");
-                    f.Text = "Quản Lý Thư Viện Sách CNTT J2Team - Xin Chào "+k[0]["HoTenNV"];
-                    f.matKhau = r[0]["MatKhau"].ToString();
-                    f.enableControl((int)r[0]["LoaiTK"]);
+                    var k = tblNhanVien.Select("ID='" + fMain.id +"'");
+                    fMain.Text = "Quản Lý Thư Viện Sách CNTT J2Team - Xin Chào "+k[0]["HoTenNV"];
+                    fMain.matKhau = r[0]["MatKhau"].ToString();
+                    fMain.enableControl((int)r[0]["LoaiTK"]);
                     this.Close();
                 }
                 else

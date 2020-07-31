@@ -60,7 +60,7 @@
             this.dgvDSDGQH.Name = "dgvDSDGQH";
             this.dgvDSDGQH.RowHeadersWidth = 51;
             this.dgvDSDGQH.RowTemplate.Height = 24;
-            this.dgvDSDGQH.Size = new System.Drawing.Size(369, 290);
+            this.dgvDSDGQH.Size = new System.Drawing.Size(390, 290);
             this.dgvDSDGQH.TabIndex = 17;
             // 
             // STT1
@@ -105,7 +105,7 @@
             this.gTKDocGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTKDocGia.Location = new System.Drawing.Point(15, 12);
             this.gTKDocGia.Name = "gTKDocGia";
-            this.gTKDocGia.Size = new System.Drawing.Size(369, 152);
+            this.gTKDocGia.Size = new System.Drawing.Size(387, 152);
             this.gTKDocGia.TabIndex = 15;
             this.gTKDocGia.TabStop = false;
             this.gTKDocGia.Text = "Thống Kê Độc Giả";
@@ -164,7 +164,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(398, 112);
+            this.chart1.Location = new System.Drawing.Point(438, 85);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
@@ -172,7 +172,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(390, 390);
+            this.chart1.Size = new System.Drawing.Size(365, 325);
             this.chart1.TabIndex = 18;
             this.chart1.Text = "chart1";
             // 
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 514);
+            this.ClientSize = new System.Drawing.Size(845, 540);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dgvDSDGQH);
             this.Controls.Add(this.label11);

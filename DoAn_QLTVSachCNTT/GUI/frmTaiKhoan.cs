@@ -16,5 +16,13 @@ namespace DoAn_QLTVSachCNTT
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            //Xu ly remove tabpage doi mat khau
+            TabPage p = (TabPage)this.Parent;
+            TabControl tabMain = (TabControl)p.Parent;
+            tabMain.TabPages.Remove(p);
+        }
     }
 }

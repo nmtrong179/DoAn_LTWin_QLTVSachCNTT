@@ -86,7 +86,17 @@ namespace DoAn_QLTVSachCNTT
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //Xu ly remove tabpage doi mat khau
+            TabPage p = (TabPage)this.Parent;
+            TabControl tabMain = (TabControl)p.Parent;
+            tabMain.TabPages.Remove(p);
+        }
+
+        private void frmDoiMatKhau_Load(object sender, EventArgs e)
+        {
+            //full man hinh
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

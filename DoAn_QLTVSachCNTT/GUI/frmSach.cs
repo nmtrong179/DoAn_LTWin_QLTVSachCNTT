@@ -26,6 +26,7 @@ namespace DoAn_QLTVSachCNTT
 
         private void frmSach_Load(object sender, EventArgs e)
         {
+
             tblSach = new XLSach();
             tblNCC = new XLNhaCungCap();
             loadCTSach();
@@ -54,6 +55,8 @@ namespace DoAn_QLTVSachCNTT
             cbNCC.DataBindings.Add("SelectedValue", tblSach,"MaNCC", true);
             DSSach = this.BindingContext[tblSach];
             enabledButton();
+            dgvTTSach.AutoGenerateColumns = false;
+            dgvTTSach.DataSource = tblSach;
         }
 
         private void enabledButton()
@@ -66,6 +69,7 @@ namespace DoAn_QLTVSachCNTT
             btnLuu.Enabled = capNhat;
             btnHuy.Enabled = capNhat;
             btnChonHinh.Enabled = capNhat;
+            dgvTTSach.Enabled = !capNhat;
         }
 
         private void loadNCC()
@@ -83,8 +87,6 @@ namespace DoAn_QLTVSachCNTT
             ds.Relations.Add(qh);
             DataColumn cTenNCC = new DataColumn("TenNCC", Type.GetType("System.String"), "Parent (FRK_NHACUNGCAP_SACH).TenNCC");
             tblSach.Columns.Add(cTenNCC);
-            dgvTTSach.AutoGenerateColumns = false;
-            dgvTTSach.DataSource = tblSach;
         }
 
         private void dgvTTSach_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -140,7 +142,10 @@ namespace DoAn_QLTVSachCNTT
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //Xu ly remove tabpage doi mat khau
+            TabPage p = (TabPage)this.Parent;
+            TabControl tabMain = (TabControl)p.Parent;
+            tabMain.TabPages.Remove(p);
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
@@ -177,13 +182,13 @@ namespace DoAn_QLTVSachCNTT
                 DSSach.EndCurrentEdit();
                 daSach.Update(tblSach);
                 tblSach.AcceptChanges();
-                MessageBox.Show("Thêm sách thành công!");
+                MessageBox.Show("Cập nhật thành công!");
                 capNhat = false;
                 enabledButton();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Sách đã tồn tại!");
+                MessageBox.Show("Cập nhật thất bại!");
                 txtMaSach.Focus();
             }
         }
