@@ -331,6 +331,26 @@ namespace DoAn_QLTVSachCNTT
             }
         }
 
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //XL ly tabpage da ton chi active
+            int index = tabControlMain.TabPages.IndexOfKey("tabPageChiTietPhieuMuon");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else // Truong hop chua co tao moi tabpage
+            {
+                frmCTPhieuMuon f = new frmCTPhieuMuon();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPageChiTietPhieuMuon";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                f.Show();
+            }
+        }
+
         private void btnDoiMK_ItemClick(object sender, ItemClickEventArgs e)
         {
             //XL ly tabpage da ton chi active

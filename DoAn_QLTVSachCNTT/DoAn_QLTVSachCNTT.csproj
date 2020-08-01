@@ -78,10 +78,10 @@
     <Compile Include="DATA\XLTaiKhoan.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="frmCTPhieuMuon.cs">
+    <Compile Include="GUI\frmCTPhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCTPhieuMuon.Designer.cs">
+    <Compile Include="GUI\frmCTPhieuMuon.Designer.cs">
       <DependentUpon>frmCTPhieuMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
@@ -164,7 +164,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCTPhieuMuon.resx">
+    <EmbeddedResource Include="GUI\frmCTPhieuMuon.resx">
       <DependentUpon>frmCTPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
