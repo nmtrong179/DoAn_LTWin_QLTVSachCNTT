@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.gTKSach = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSLConLai = new System.Windows.Forms.TextBox();
+            this.txtSachQuaHan = new System.Windows.Forms.TextBox();
+            this.txtSLSachMuon = new System.Windows.Forms.TextBox();
+            this.txtSLSach = new System.Windows.Forms.TextBox();
+            this.txtDauSach = new System.Windows.Forms.TextBox();
+            this.txtTheLoai = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,27 +46,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDSSQH = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.chSach = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaPM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label10 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gTKSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSQH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chSach)).BeginInit();
             this.SuspendLayout();
             // 
             // gTKSach
             // 
-            this.gTKSach.Controls.Add(this.textBox6);
-            this.gTKSach.Controls.Add(this.textBox5);
-            this.gTKSach.Controls.Add(this.textBox4);
-            this.gTKSach.Controls.Add(this.textBox3);
-            this.gTKSach.Controls.Add(this.textBox2);
-            this.gTKSach.Controls.Add(this.textBox1);
+            this.gTKSach.Controls.Add(this.txtSLConLai);
+            this.gTKSach.Controls.Add(this.txtSachQuaHan);
+            this.gTKSach.Controls.Add(this.txtSLSachMuon);
+            this.gTKSach.Controls.Add(this.txtSLSach);
+            this.gTKSach.Controls.Add(this.txtDauSach);
+            this.gTKSach.Controls.Add(this.txtTheLoai);
             this.gTKSach.Controls.Add(this.label6);
             this.gTKSach.Controls.Add(this.label5);
             this.gTKSach.Controls.Add(this.label4);
@@ -80,47 +80,47 @@
             this.gTKSach.TabStop = false;
             this.gTKSach.Text = "Thống Kê Sách";
             // 
-            // textBox6
+            // txtSLConLai
             // 
-            this.textBox6.Location = new System.Drawing.Point(531, 73);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(120, 24);
-            this.textBox6.TabIndex = 11;
+            this.txtSLConLai.Location = new System.Drawing.Point(531, 73);
+            this.txtSLConLai.Name = "txtSLConLai";
+            this.txtSLConLai.Size = new System.Drawing.Size(120, 24);
+            this.txtSLConLai.TabIndex = 11;
             // 
-            // textBox5
+            // txtSachQuaHan
             // 
-            this.textBox5.Location = new System.Drawing.Point(531, 115);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(120, 24);
-            this.textBox5.TabIndex = 10;
+            this.txtSachQuaHan.Location = new System.Drawing.Point(531, 115);
+            this.txtSachQuaHan.Name = "txtSachQuaHan";
+            this.txtSachQuaHan.Size = new System.Drawing.Size(120, 24);
+            this.txtSachQuaHan.TabIndex = 10;
             // 
-            // textBox4
+            // txtSLSachMuon
             // 
-            this.textBox4.Location = new System.Drawing.Point(531, 30);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 24);
-            this.textBox4.TabIndex = 9;
+            this.txtSLSachMuon.Location = new System.Drawing.Point(531, 30);
+            this.txtSLSachMuon.Name = "txtSLSachMuon";
+            this.txtSLSachMuon.Size = new System.Drawing.Size(120, 24);
+            this.txtSLSachMuon.TabIndex = 9;
             // 
-            // textBox3
+            // txtSLSach
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(118, 24);
-            this.textBox3.TabIndex = 8;
+            this.txtSLSach.Location = new System.Drawing.Point(182, 112);
+            this.txtSLSach.Name = "txtSLSach";
+            this.txtSLSach.Size = new System.Drawing.Size(118, 24);
+            this.txtSLSach.TabIndex = 8;
             // 
-            // textBox2
+            // txtDauSach
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 24);
-            this.textBox2.TabIndex = 7;
+            this.txtDauSach.Location = new System.Drawing.Point(182, 27);
+            this.txtDauSach.Name = "txtDauSach";
+            this.txtDauSach.Size = new System.Drawing.Size(118, 24);
+            this.txtDauSach.TabIndex = 7;
             // 
-            // textBox1
+            // txtTheLoai
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 24);
-            this.textBox1.TabIndex = 6;
+            this.txtTheLoai.Location = new System.Drawing.Point(182, 70);
+            this.txtTheLoai.Name = "txtTheLoai";
+            this.txtTheLoai.Size = new System.Drawing.Size(118, 24);
+            this.txtTheLoai.TabIndex = 6;
             // 
             // label6
             // 
@@ -183,7 +183,6 @@
             this.STT,
             this.MaPM,
             this.MaDG,
-            this.MaSach,
             this.NgayMuon,
             this.NgayTra});
             this.dgvDSSQH.Location = new System.Drawing.Point(12, 199);
@@ -192,48 +191,7 @@
             this.dgvDSSQH.RowTemplate.Height = 24;
             this.dgvDSSQH.Size = new System.Drawing.Size(679, 290);
             this.dgvDSSQH.TabIndex = 2;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            this.STT.Width = 50;
-            // 
-            // MaPM
-            // 
-            this.MaPM.HeaderText = "Mã Phiếu Mượn";
-            this.MaPM.MinimumWidth = 6;
-            this.MaPM.Name = "MaPM";
-            this.MaPM.Width = 80;
-            // 
-            // MaDG
-            // 
-            this.MaDG.HeaderText = "Mã Độc Giả";
-            this.MaDG.MinimumWidth = 6;
-            this.MaDG.Name = "MaDG";
-            this.MaDG.Width = 70;
-            // 
-            // MaSach
-            // 
-            this.MaSach.HeaderText = "Mã Sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            this.MaSach.Width = 80;
-            // 
-            // NgayMuon
-            // 
-            this.NgayMuon.HeaderText = "Ngày Mượn";
-            this.NgayMuon.MinimumWidth = 6;
-            this.NgayMuon.Name = "NgayMuon";
-            this.NgayMuon.Width = 90;
-            // 
-            // NgayTra
-            // 
-            this.NgayTra.HeaderText = "Ngày Trả";
-            this.NgayTra.MinimumWidth = 6;
-            this.NgayTra.Name = "NgayTra";
-            this.NgayTra.Width = 90;
+            this.dgvDSSQH.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSSQH_DataBindingComplete);
             // 
             // label10
             // 
@@ -245,39 +203,83 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Danh Sách Sách Quá Hạn: ";
             // 
-            // chart1
+            // chSach
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(708, 99);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(390, 390);
-            this.chart1.TabIndex = 19;
-            this.chart1.Text = "chart1";
+            chartArea4.Name = "ChartArea1";
+            this.chSach.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chSach.Legends.Add(legend4);
+            this.chSach.Location = new System.Drawing.Point(697, 12);
+            this.chSach.Name = "chSach";
+            this.chSach.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Số Lượng Sách";
+            this.chSach.Series.Add(series4);
+            this.chSach.Size = new System.Drawing.Size(570, 477);
+            this.chSach.TabIndex = 19;
+            this.chSach.Text = "Thống Kê Sách";
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.ForeColor = System.Drawing.Color.Red;
+            title4.Name = "chSach";
+            title4.Text = "Biểu Đồ Thống Kê Sách";
+            this.chSach.Titles.Add(title4);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.Width = 70;
+            // 
+            // MaPM
+            // 
+            this.MaPM.DataPropertyName = "MaPM";
+            this.MaPM.HeaderText = "Mã Phiếu Mượn";
+            this.MaPM.MinimumWidth = 6;
+            this.MaPM.Name = "MaPM";
+            this.MaPM.Width = 90;
+            // 
+            // MaDG
+            // 
+            this.MaDG.DataPropertyName = "MaDG";
+            this.MaDG.HeaderText = "Mã Độc Giả";
+            this.MaDG.MinimumWidth = 6;
+            this.MaDG.Name = "MaDG";
+            this.MaDG.Width = 90;
+            // 
+            // NgayMuon
+            // 
+            this.NgayMuon.DataPropertyName = "NgayMuon";
+            this.NgayMuon.HeaderText = "Ngày Mượn";
+            this.NgayMuon.MinimumWidth = 6;
+            this.NgayMuon.Name = "NgayMuon";
+            this.NgayMuon.Width = 90;
+            // 
+            // NgayTra
+            // 
+            this.NgayTra.DataPropertyName = "NgayTra";
+            this.NgayTra.HeaderText = "Ngày Trả";
+            this.NgayTra.MinimumWidth = 6;
+            this.NgayTra.Name = "NgayTra";
+            this.NgayTra.Width = 90;
             // 
             // frmThongKeSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1279, 420);
-            this.Controls.Add(this.chart1);
+            this.ClientSize = new System.Drawing.Size(1279, 537);
+            this.Controls.Add(this.chSach);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgvDSSQH);
             this.Controls.Add(this.gTKSach);
             this.Name = "frmThongKeSach";
             this.Text = "Thống Kê Sách";
+            this.Load += new System.EventHandler(this.frmThongKeSach_Load);
             this.gTKSach.ResumeLayout(false);
             this.gTKSach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSQH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,20 +294,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSLConLai;
+        private System.Windows.Forms.TextBox txtSachQuaHan;
+        private System.Windows.Forms.TextBox txtSLSachMuon;
+        private System.Windows.Forms.TextBox txtSLSach;
+        private System.Windows.Forms.TextBox txtDauSach;
+        private System.Windows.Forms.TextBox txtTheLoai;
         private System.Windows.Forms.DataGridView dgvDSSQH;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPM;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayTra;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

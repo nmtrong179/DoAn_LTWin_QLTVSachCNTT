@@ -16,7 +16,7 @@ namespace DoAn_QLTVSachCNTT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCTPhieuMuon());
+            Application.Run(new frmThongKeSach());
         }
     }
 }
