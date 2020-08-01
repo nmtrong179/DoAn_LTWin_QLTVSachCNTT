@@ -127,7 +127,7 @@ namespace DoAn_QLTVSachCNTT
                 daSach.Update(tblSach);
                 tblSach.AcceptChanges();
             }
-            catch (SqlException ex)
+            catch
             {
                 tblSach.RejectChanges();
                 MessageBox.Show("Xoá thất bại!!!");
@@ -136,13 +136,14 @@ namespace DoAn_QLTVSachCNTT
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            txtMaSach.Enabled = false;
             capNhat = true;
             enabledButton();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            //Xu ly remove tabpage doi mat khau
+            //Xu ly remove tabpage
             TabPage p = (TabPage)this.Parent;
             TabControl tabMain = (TabControl)p.Parent;
             tabMain.TabPages.Remove(p);

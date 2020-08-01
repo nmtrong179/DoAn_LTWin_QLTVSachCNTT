@@ -67,10 +67,8 @@ namespace DoAn_QLTVSachCNTT
             tblSach = new XLSach();
             rdTheoMaDG.Checked = true;
             loadDocGia();
-            loadSach();
             loadNhanVien();
             loadPhieuMuon();
-            loadCTPhieuMuon();
             daPhieuMuon = new SqlDataAdapter("Select * from PHIEUMUON", XLPhieuMuon.cnnStr);
             daCTPhieuMuon = new SqlDataAdapter("Select * from CTPHIEUMUON", XLCTPhieuMuon.cnnStr);
             daDocGia = new SqlDataAdapter("Select * from DOCGIA", XLDocGia.cnnStr);
@@ -86,18 +84,16 @@ namespace DoAn_QLTVSachCNTT
             }
             var cmb = new SqlCommandBuilder(daPhieuMuon);
 
-            cbMaDG.DataBindings.Add("SelectedValue", tblCTPhieuMuon, "MaDG", true);
-            cbMaNV.DataBindings.Add("SelectedValue", tblCTPhieuMuon, "MaNV", true);
-            cbMaSach.DataBindings.Add("SelectedValue", tblCTPhieuMuon, "MaSach", true);
-            cbMaPM.DataBindings.Add("SelectedValue", tblCTPhieuMuon, "MaPM", true);
-            nudSL.DataBindings.Add("text", tblCTPhieuMuon, "SoLuong", true);
-            dtMuon.DataBindings.Add("text", tblCTPhieuMuon, "NgayMuon", true);
-            dtTra.DataBindings.Add("text", tblCTPhieuMuon, "NgayTra", true);
-            rdChuaTra.DataBindings.Add("checked", tblCTPhieuMuon, "TrangThai", true);
-            DSPM = this.BindingContext[tblCTPhieuMuon];
+            cbMaDG.DataBindings.Add("SelectedValue", tblPhieuMuon, "MaDG", true);
+            cbMaNV.DataBindings.Add("SelectedValue", tblPhieuMuon, "MaNV", true);
+            cbMaPM.DataBindings.Add("SelectedValue", tblPhieuMuon, "MaPM", true);
+            dtMuon.DataBindings.Add("text", tblPhieuMuon, "NgayMuon", true);
+            dtTra.DataBindings.Add("text", tblPhieuMuon, "NgayTra", true);
+            rdDaTra.DataBindings.Add("checked", tblPhieuMuon, "TrangThai", true);
+            DSPM = this.BindingContext[tblPhieuMuon];
             enabledButton();
             dgvDSPM.AutoGenerateColumns = false;
-            dgvDSPM.DataSource = tblCTPhieuMuon;
+            dgvDSPM.DataSource = tblPhieuMuon;
         }
 
         private void loadDocGia()
@@ -105,12 +101,6 @@ namespace DoAn_QLTVSachCNTT
             cbMaDG.DataSource = tblDocGia;
             cbMaDG.ValueMember = "MaDG";
             cbMaDG.DisplayMember = "MaDG";
-        }
-        private void loadSach()
-        {
-            cbMaSach.DataSource = tblSach;
-            cbMaSach.ValueMember = "MaSach";
-            cbMaSach.DisplayMember = "MaSach";
         }
 
         private void dgvDSPM_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -128,43 +118,78 @@ namespace DoAn_QLTVSachCNTT
 
         private void btnTraSach_Click(object sender, EventArgs e)
         {
-            btnXacNhanTra.Enabled = true;
+            if (MessageBox.Show("Bạn Có Chắc Muốn Trả Sách ?", "Thông Báo Trả Sách", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                rdDaTra.Checked = true;
+                try
+                {
+                    DSPM.EndCurrentEdit();
+                    daPhieuMuon.Update(tblPhieuMuon);
+                    tblPhieuMuon.AcceptChanges();
+                    MessageBox.Show("Gia hạn thành công!");
+                    capNhat = false;
+                    enabledButton();
+                }
+                catch
+                {
+                    MessageBox.Show("Gia hạn thất bại!");
+                    cbMaPM.Focus();
+                }
+            }
         }
 
         private void btnGiaHan_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn Có Chắc Muốn Gia Hạn ?", "Thông Báo Gia Hạn", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                MessageBox.Show("Chức Năng Chưa Sử Dụng Được!");
             }
         }
 
-        private void rdChuaTra_CheckedChanged(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            rdDaTra.Checked = !rdChuaTra.Checked;
+            cbMaPM.Enabled = false;
+            capNhat = true;
+            enabledButton();
         }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DSPM.EndCurrentEdit();
+                daPhieuMuon.Update(tblPhieuMuon);
+                tblPhieuMuon.AcceptChanges();
+                MessageBox.Show("Cập nhật thành công!");
+                capNhat = false;
+                enabledButton();
+            }
+            catch
+            {
+                MessageBox.Show("Cập nhật thất bại!");
+                cbMaPM.Focus();
+            }
+        }
+
+        private void rdDaTra_CheckedChanged(object sender, EventArgs e)
+        {
+            rdChuaTra.Checked = !rdDaTra.Checked;
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            DSPM.CancelCurrentEdit();
+            tblPhieuMuon.RejectChanges();
+            capNhat = false;
+            enabledButton();
+        }
+
 
         private void loadPhieuMuon()
         {
             cbMaPM.DataSource = tblPhieuMuon;
             cbMaPM.ValueMember = "MaPM";
             cbMaPM.DisplayMember = "MaPM";
-        }
-
-        private void loadCTPhieuMuon()
-        {
-            DataSet ds = new DataSet();
-            ds.Tables.AddRange(new DataTable[] { tblPhieuMuon, tblCTPhieuMuon });
-            DataRelation qh = new DataRelation("FRK_PHIEUMUON_CTPHIEUMUON", tblPhieuMuon.Columns["MaPM"], tblCTPhieuMuon.Columns["MaPM"]);
-            ds.Relations.Add(qh);
-            DataColumn cMaNV = new DataColumn("MaNV", Type.GetType("System.String"), "Parent(FRK_PHIEUMUON_CTPHIEUMUON).MaNV");
-            DataColumn cMaDG = new DataColumn("MaDG", Type.GetType("System.String"), "Parent(FRK_PHIEUMUON_CTPHIEUMUON).MaDG");
-            DataColumn cNgayTra = new DataColumn("NgayTra", Type.GetType("System.String"), "Parent(FRK_PHIEUMUON_CTPHIEUMUON).NgayTra");
-            DataColumn cNgayMuon = new DataColumn("NgayMuon", Type.GetType("System.String"), "Parent(FRK_PHIEUMUON_CTPHIEUMUON).NgayMuon");
-            tblCTPhieuMuon.Columns.Add(cMaNV);
-            tblCTPhieuMuon.Columns.Add(cMaDG);
-            tblCTPhieuMuon.Columns.Add(cNgayTra);
-            tblCTPhieuMuon.Columns.Add(cNgayMuon);
         }
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
