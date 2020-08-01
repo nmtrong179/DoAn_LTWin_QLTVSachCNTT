@@ -176,6 +176,13 @@ namespace DoAn_QLTVSachCNTT
             }
         }
 
+        private void btnInDSSach_Click(object sender, EventArgs e)
+        {
+            frmDSSach f = new frmDSSach();
+            f.WindowState = FormWindowState.Maximized;
+            f.Show();
+        }
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try

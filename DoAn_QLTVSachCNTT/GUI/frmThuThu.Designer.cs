@@ -73,6 +73,7 @@
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnInDSNV = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTThuThu)).BeginInit();
             this.gTimKiem.SuspendLayout();
             this.gTTThuThu.SuspendLayout();
@@ -513,11 +514,22 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnInDSNV
+            // 
+            this.btnInDSNV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInDSNV.ImageOptions.Image")));
+            this.btnInDSNV.Location = new System.Drawing.Point(698, 295);
+            this.btnInDSNV.Name = "btnInDSNV";
+            this.btnInDSNV.Size = new System.Drawing.Size(134, 45);
+            this.btnInDSNV.TabIndex = 12;
+            this.btnInDSNV.Text = "In DSNV";
+            this.btnInDSNV.Click += new System.EventHandler(this.btnInDSNV_Click);
+            // 
             // frmThuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 420);
+            this.Controls.Add(this.btnInDSNV);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvTTThuThu);
             this.Controls.Add(this.gTimKiem);
@@ -584,5 +596,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ChucVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private DevExpress.XtraEditors.SimpleButton btnInDSNV;
     }
 }

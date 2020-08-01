@@ -69,6 +69,7 @@
             this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnInDSSach = new DevExpress.XtraEditors.SimpleButton();
             this.gTTSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSLTon)).BeginInit();
@@ -322,7 +323,7 @@
             this.gTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTimKiem.Location = new System.Drawing.Point(13, 267);
             this.gTimKiem.Name = "gTimKiem";
-            this.gTimKiem.Size = new System.Drawing.Size(663, 84);
+            this.gTimKiem.Size = new System.Drawing.Size(827, 84);
             this.gTimKiem.TabIndex = 1;
             this.gTimKiem.TabStop = false;
             this.gTimKiem.Text = "Tìm Kiếm";
@@ -330,7 +331,7 @@
             // btnTimKiem
             // 
             this.btnTimKiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.ImageOptions.Image")));
-            this.btnTimKiem.Location = new System.Drawing.Point(515, 25);
+            this.btnTimKiem.Location = new System.Drawing.Point(649, 30);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(115, 43);
             this.btnTimKiem.TabIndex = 3;
@@ -339,9 +340,9 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(237, 34);
+            this.txtTimKiem.Location = new System.Drawing.Point(238, 39);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(250, 24);
+            this.txtTimKiem.Size = new System.Drawing.Size(353, 24);
             this.txtTimKiem.TabIndex = 2;
             this.txtTimKiem.Text = "Tìm Kiếm.....";
             this.txtTimKiem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTimKiem_MouseClick);
@@ -350,7 +351,7 @@
             // rdTheoTen
             // 
             this.rdTheoTen.AutoSize = true;
-            this.rdTheoTen.Location = new System.Drawing.Point(75, 51);
+            this.rdTheoTen.Location = new System.Drawing.Point(76, 51);
             this.rdTheoTen.Name = "rdTheoTen";
             this.rdTheoTen.Size = new System.Drawing.Size(96, 22);
             this.rdTheoTen.TabIndex = 1;
@@ -361,7 +362,7 @@
             // rdTheoMa
             // 
             this.rdTheoMa.AutoSize = true;
-            this.rdTheoMa.Location = new System.Drawing.Point(75, 23);
+            this.rdTheoMa.Location = new System.Drawing.Point(76, 23);
             this.rdTheoMa.Name = "rdTheoMa";
             this.rdTheoMa.Size = new System.Drawing.Size(92, 22);
             this.rdTheoMa.TabIndex = 0;
@@ -466,11 +467,22 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnInDSSach
+            // 
+            this.btnInDSSach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInDSSach.ImageOptions.Image")));
+            this.btnInDSSach.Location = new System.Drawing.Point(892, 286);
+            this.btnInDSSach.Name = "btnInDSSach";
+            this.btnInDSSach.Size = new System.Drawing.Size(146, 54);
+            this.btnInDSSach.TabIndex = 11;
+            this.btnInDSSach.Text = "In DS Sách";
+            this.btnInDSSach.Click += new System.EventHandler(this.btnInDSSach_Click);
+            // 
             // frmSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 420);
+            this.Controls.Add(this.btnInDSSach);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvTTSach);
             this.Controls.Add(this.gTimKiem);
@@ -534,5 +546,6 @@
         private System.Windows.Forms.TextBox txtTheLoai;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pSach;
+        private DevExpress.XtraEditors.SimpleButton btnInDSSach;
     }
 }

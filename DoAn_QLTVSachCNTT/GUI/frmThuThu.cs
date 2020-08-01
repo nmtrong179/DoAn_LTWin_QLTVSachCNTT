@@ -172,5 +172,12 @@ namespace DoAn_QLTVSachCNTT
         {
             rdNu.Checked = !rdNam.Checked;
         }
+
+        private void btnInDSNV_Click(object sender, EventArgs e)
+        {
+            frmDSNV f = new frmDSNV();
+            f.WindowState = FormWindowState.Maximized;
+            f.Show();
+        }
     }
 }
