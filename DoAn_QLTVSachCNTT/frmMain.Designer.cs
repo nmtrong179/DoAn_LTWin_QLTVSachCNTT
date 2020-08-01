@@ -174,6 +174,7 @@
             this.btnGioiThieu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGioiThieu.ImageOptions.Image")));
             this.btnGioiThieu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGioiThieu.ImageOptions.LargeImage")));
             this.btnGioiThieu.Name = "btnGioiThieu";
+            this.btnGioiThieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGioiThieu_ItemClick);
             // 
             // btnQuyDinh
             // 
@@ -182,6 +183,7 @@
             this.btnQuyDinh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQuyDinh.ImageOptions.Image")));
             this.btnQuyDinh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQuyDinh.ImageOptions.LargeImage")));
             this.btnQuyDinh.Name = "btnQuyDinh";
+            this.btnQuyDinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQuyDinh_ItemClick);
             // 
             // btnTaiKhoan
             // 

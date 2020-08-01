@@ -187,7 +187,7 @@ namespace DoAn_QLTVSachCNTT
                 capNhat = false;
                 enabledButton();
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Cập nhật thất bại!");
                 txtMaSach.Focus();

@@ -105,7 +105,7 @@ namespace DoAn_QLTVSachCNTT
                 tblNhanVien.AcceptChanges();
                 MessageBox.Show("Xoá thành công!");
             }
-            catch (SqlException ex)
+            catch
             {
                 tblNhanVien.RejectChanges();
                 MessageBox.Show("Xoá thất bại!!!");
@@ -161,7 +161,7 @@ namespace DoAn_QLTVSachCNTT
                 capNhat = false;
                 enabledButton();
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Thủ Thư đã tồn tại hoặc trùng ID!");
                 txtMaTT.Focus();

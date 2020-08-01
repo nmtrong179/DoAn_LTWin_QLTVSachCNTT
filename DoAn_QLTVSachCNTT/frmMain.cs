@@ -291,6 +291,46 @@ namespace DoAn_QLTVSachCNTT
             }
         }
 
+        private void btnGioiThieu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //XL ly tabpage da ton chi active
+            int index = tabControlMain.TabPages.IndexOfKey("tabPageGioiThieuChung");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else // Truong hop chua co tao moi tabpage
+            {
+                frmGioiThieu f = new frmGioiThieu();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPageGioiThieuChung";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                f.Show();
+            }
+        }
+
+        private void btnQuyDinh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //XL ly tabpage da ton chi active
+            int index = tabControlMain.TabPages.IndexOfKey("tabPageQuyDinhChung");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else // Truong hop chua co tao moi tabpage
+            {
+                frmQuyDinh f = new frmQuyDinh();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPageQuyDinhChung";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                f.Show();
+            }
+        }
+
         private void btnDoiMK_ItemClick(object sender, ItemClickEventArgs e)
         {
             //XL ly tabpage da ton chi active

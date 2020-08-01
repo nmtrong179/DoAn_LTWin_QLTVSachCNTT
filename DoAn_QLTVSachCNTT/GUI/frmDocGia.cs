@@ -105,7 +105,7 @@ namespace DoAn_QLTVSachCNTT
                 tblDocGia.AcceptChanges();
                 MessageBox.Show("Xoá thành công!");
             }
-            catch (SqlException ex)
+            catch
             {
                 tblDocGia.RejectChanges();
                 MessageBox.Show("Xoá thất bại!!!");
@@ -165,7 +165,7 @@ namespace DoAn_QLTVSachCNTT
                 capNhat = false;
                 enabledButton();
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Độc giả đã tồn tại!");
                 txtMaDG.Focus();
