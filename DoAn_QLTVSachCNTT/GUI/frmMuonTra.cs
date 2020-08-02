@@ -185,6 +185,7 @@ namespace DoAn_QLTVSachCNTT
                 DSPM.RemoveAt(DSPM.Position);
                 daPhieuMuon.Update(tblPhieuMuon);
                 tblPhieuMuon.AcceptChanges();
+                MessageBox.Show("Xoá thành công!");
             }
             catch
             {

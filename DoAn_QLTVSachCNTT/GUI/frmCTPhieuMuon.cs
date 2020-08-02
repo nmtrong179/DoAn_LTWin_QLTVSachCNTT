@@ -99,6 +99,7 @@ namespace DoAn_QLTVSachCNTT
                 DSCTPM.RemoveAt(DSCTPM.Position);
                 daCTPM.Update(tblCTPhieuMuon);
                 tblCTPhieuMuon.AcceptChanges();
+                MessageBox.Show("Xoá thành công!");
             }
             catch
             {

@@ -126,6 +126,7 @@ namespace DoAn_QLTVSachCNTT
                 DSSach.RemoveAt(DSSach.Position);
                 daSach.Update(tblSach);
                 tblSach.AcceptChanges();
+                MessageBox.Show("Xoá thành công!");
             }
             catch
             {

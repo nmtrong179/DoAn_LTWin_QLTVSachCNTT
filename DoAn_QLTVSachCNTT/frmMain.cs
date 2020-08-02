@@ -123,7 +123,7 @@ namespace DoAn_QLTVSachCNTT
             {
                 frmMuonTra f = new frmMuonTra();
                 TabPage p = new TabPage(f.Text);
-                p.Name = "tabPagMuonTra";
+                p.Name = "tabPageMuonTra";
                 f.TopLevel = false;
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;
