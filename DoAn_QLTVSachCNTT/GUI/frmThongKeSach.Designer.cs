@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongKeSach));
             this.gTKSach = new System.Windows.Forms.GroupBox();
             this.txtSLConLai = new System.Windows.Forms.TextBox();
             this.txtSachQuaHan = new System.Windows.Forms.TextBox();
@@ -51,11 +52,19 @@
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaPM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoNgayQH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gTimKiem = new System.Windows.Forms.GroupBox();
+            this.btnTimKiem = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.rdTheoTenSach = new System.Windows.Forms.RadioButton();
+            this.rdTheoMS = new System.Windows.Forms.RadioButton();
             this.gTKSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSQH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chSach)).BeginInit();
+            this.gTimKiem.SuspendLayout();
             this.SuspendLayout();
             // 
             // gTKSach
@@ -183,13 +192,15 @@
             this.STT,
             this.MaPM,
             this.MaDG,
-            this.NgayMuon,
-            this.NgayTra});
-            this.dgvDSSQH.Location = new System.Drawing.Point(12, 199);
+            this.MaSach,
+            this.TenSach,
+            this.SoLuong,
+            this.SoNgayQH});
+            this.dgvDSSQH.Location = new System.Drawing.Point(12, 309);
             this.dgvDSSQH.Name = "dgvDSSQH";
             this.dgvDSSQH.RowHeadersWidth = 51;
             this.dgvDSSQH.RowTemplate.Height = 24;
-            this.dgvDSSQH.Size = new System.Drawing.Size(679, 290);
+            this.dgvDSSQH.Size = new System.Drawing.Size(679, 180);
             this.dgvDSSQH.TabIndex = 2;
             this.dgvDSSQH.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSSQH_DataBindingComplete);
             // 
@@ -197,7 +208,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(9, 179);
+            this.label10.Location = new System.Drawing.Point(9, 288);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(214, 18);
             this.label10.TabIndex = 12;
@@ -205,32 +216,32 @@
             // 
             // chSach
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chSach.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chSach.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chSach.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chSach.Legends.Add(legend2);
             this.chSach.Location = new System.Drawing.Point(697, 12);
             this.chSach.Name = "chSach";
             this.chSach.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Số Lượng Sách";
-            this.chSach.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Số Lượng Sách";
+            this.chSach.Series.Add(series2);
             this.chSach.Size = new System.Drawing.Size(570, 477);
             this.chSach.TabIndex = 19;
             this.chSach.Text = "Thống Kê Sách";
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.ForeColor = System.Drawing.Color.Red;
-            title4.Name = "chSach";
-            title4.Text = "Biểu Đồ Thống Kê Sách";
-            this.chSach.Titles.Add(title4);
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.ForeColor = System.Drawing.Color.Red;
+            title2.Name = "chSach";
+            title2.Text = "Biểu Đồ Thống Kê Sách";
+            this.chSach.Titles.Add(title2);
             // 
             // STT
             // 
             this.STT.HeaderText = "STT";
             this.STT.MinimumWidth = 6;
             this.STT.Name = "STT";
-            this.STT.Width = 70;
+            this.STT.Width = 60;
             // 
             // MaPM
             // 
@@ -238,7 +249,7 @@
             this.MaPM.HeaderText = "Mã Phiếu Mượn";
             this.MaPM.MinimumWidth = 6;
             this.MaPM.Name = "MaPM";
-            this.MaPM.Width = 90;
+            this.MaPM.Width = 70;
             // 
             // MaDG
             // 
@@ -246,29 +257,102 @@
             this.MaDG.HeaderText = "Mã Độc Giả";
             this.MaDG.MinimumWidth = 6;
             this.MaDG.Name = "MaDG";
-            this.MaDG.Width = 90;
+            this.MaDG.Width = 70;
             // 
-            // NgayMuon
+            // MaSach
             // 
-            this.NgayMuon.DataPropertyName = "NgayMuon";
-            this.NgayMuon.HeaderText = "Ngày Mượn";
-            this.NgayMuon.MinimumWidth = 6;
-            this.NgayMuon.Name = "NgayMuon";
-            this.NgayMuon.Width = 90;
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã Sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.Width = 70;
             // 
-            // NgayTra
+            // TenSach
             // 
-            this.NgayTra.DataPropertyName = "NgayTra";
-            this.NgayTra.HeaderText = "Ngày Trả";
-            this.NgayTra.MinimumWidth = 6;
-            this.NgayTra.Name = "NgayTra";
-            this.NgayTra.Width = 90;
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên Sách";
+            this.TenSach.MinimumWidth = 6;
+            this.TenSach.Name = "TenSach";
+            this.TenSach.Width = 125;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 60;
+            // 
+            // SoNgayQH
+            // 
+            this.SoNgayQH.DataPropertyName = "SoNgayQH";
+            this.SoNgayQH.HeaderText = "Số Ngày Quá Hạn";
+            this.SoNgayQH.MinimumWidth = 6;
+            this.SoNgayQH.Name = "SoNgayQH";
+            this.SoNgayQH.Width = 60;
+            // 
+            // gTimKiem
+            // 
+            this.gTimKiem.Controls.Add(this.btnTimKiem);
+            this.gTimKiem.Controls.Add(this.txtTimKiem);
+            this.gTimKiem.Controls.Add(this.rdTheoTenSach);
+            this.gTimKiem.Controls.Add(this.rdTheoMS);
+            this.gTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTimKiem.Location = new System.Drawing.Point(12, 170);
+            this.gTimKiem.Name = "gTimKiem";
+            this.gTimKiem.Size = new System.Drawing.Size(679, 84);
+            this.gTimKiem.TabIndex = 20;
+            this.gTimKiem.TabStop = false;
+            this.gTimKiem.Text = "Tìm Kiếm";
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.ImageOptions.Image")));
+            this.btnTimKiem.Location = new System.Drawing.Point(536, 30);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(115, 43);
+            this.btnTimKiem.TabIndex = 3;
+            this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(193, 39);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(314, 24);
+            this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.Text = "Tìm Kiếm.....";
+            this.txtTimKiem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTimKiem_MouseClick);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // rdTheoTenSach
+            // 
+            this.rdTheoTenSach.AutoSize = true;
+            this.rdTheoTenSach.Location = new System.Drawing.Point(30, 51);
+            this.rdTheoTenSach.Name = "rdTheoTenSach";
+            this.rdTheoTenSach.Size = new System.Drawing.Size(134, 22);
+            this.rdTheoTenSach.TabIndex = 1;
+            this.rdTheoTenSach.TabStop = true;
+            this.rdTheoTenSach.Text = "Theo Tên Sách:";
+            this.rdTheoTenSach.UseVisualStyleBackColor = true;
+            // 
+            // rdTheoMS
+            // 
+            this.rdTheoMS.AutoSize = true;
+            this.rdTheoMS.Location = new System.Drawing.Point(30, 23);
+            this.rdTheoMS.Name = "rdTheoMS";
+            this.rdTheoMS.Size = new System.Drawing.Size(130, 22);
+            this.rdTheoMS.TabIndex = 0;
+            this.rdTheoMS.TabStop = true;
+            this.rdTheoMS.Text = "Theo Mã Sách:";
+            this.rdTheoMS.UseVisualStyleBackColor = true;
             // 
             // frmThongKeSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 537);
+            this.Controls.Add(this.gTimKiem);
             this.Controls.Add(this.chSach);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgvDSSQH);
@@ -280,6 +364,8 @@
             this.gTKSach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSQH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chSach)).EndInit();
+            this.gTimKiem.ResumeLayout(false);
+            this.gTimKiem.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +392,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPM;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoNgayQH;
+        private System.Windows.Forms.GroupBox gTimKiem;
+        private DevExpress.XtraEditors.SimpleButton btnTimKiem;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.RadioButton rdTheoTenSach;
+        private System.Windows.Forms.RadioButton rdTheoMS;
     }
 }

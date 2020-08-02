@@ -39,7 +39,7 @@ namespace DoAn_QLTVSachCNTT
             gTimKiem.Enabled = !capNhat;
             btnLuu.Enabled = capNhat;
             btnHuy.Enabled = capNhat;
-            btnIn.Enabled = capNhat;
+            btnXoa.Enabled = capNhat;
             dgvDSPM.Enabled = !capNhat;
         }
 
@@ -118,39 +118,79 @@ namespace DoAn_QLTVSachCNTT
 
         private void btnTraSach_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn Có Chắc Muốn Trả Sách ?", "Thông Báo Trả Sách", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            if (rdChuaTra.Checked == true)
             {
-                rdDaTra.Checked = true;
-                try
+                if (MessageBox.Show("Bạn Có Chắc Muốn Trả Sách ?", "Thông Báo Trả Sách", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    DSPM.EndCurrentEdit();
-                    daPhieuMuon.Update(tblPhieuMuon);
-                    tblPhieuMuon.AcceptChanges();
-                    MessageBox.Show("Gia hạn thành công!");
-                    capNhat = false;
-                    enabledButton();
-                }
-                catch
-                {
-                    MessageBox.Show("Gia hạn thất bại!");
-                    cbMaPM.Focus();
+                    rdDaTra.Checked = true;
+                    try
+                    {
+                        DSPM.EndCurrentEdit();
+                        daPhieuMuon.Update(tblPhieuMuon);
+                        tblPhieuMuon.AcceptChanges();
+                        MessageBox.Show("Trả sách thành công!");
+                        capNhat = false;
+                        enabledButton();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Trả sách thất bại!");
+                        cbMaPM.Focus();
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Sách đã được trả từ trước!!!");
+            }    
+        
         }
 
         private void btnGiaHan_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn Có Chắc Muốn Gia Hạn ?", "Thông Báo Gia Hạn", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("Chức Năng Chưa Sử Dụng Được!");
+                string x = "Select DateAdd(day,10,NgayTra) from PHIEUMUON where MaPM='" + cbMaPM.Text + "' and TrangThai='False'";
+                var y = XLPhieuMuon.Thuc_hien_lenh_tinh_toan(x);
+                if (y == null)
+                {
+                    MessageBox.Show("Sách không thể gia hạn!!!");
+                }
+                else
+                {
+                    dtTra.Text = y.ToString();
+                    try
+                    {
+                        DSPM.EndCurrentEdit();
+                        daPhieuMuon.Update(tblPhieuMuon);
+                        tblPhieuMuon.AcceptChanges();
+                        MessageBox.Show("Gia hạn thành công!");
+                        capNhat = false;
+                        enabledButton();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Gia hạn thất bại!");
+                        cbMaPM.Focus();
+                    }
+                }
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            cbMaPM.Enabled = false;
-            capNhat = true;
-            enabledButton();
+            try
+            {
+                DSPM.RemoveAt(DSPM.Position);
+                daPhieuMuon.Update(tblPhieuMuon);
+                tblPhieuMuon.AcceptChanges();
+            }
+            catch
+            {
+                tblPhieuMuon.RejectChanges();
+                MessageBox.Show("Xoá thất bại!!!");
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -174,6 +214,13 @@ namespace DoAn_QLTVSachCNTT
         private void rdDaTra_CheckedChanged(object sender, EventArgs e)
         {
             rdChuaTra.Checked = !rdDaTra.Checked;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            cbMaPM.Enabled = false;
+            capNhat = true;
+            enabledButton();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

@@ -19,9 +19,8 @@ namespace DoAn_QLTVSachCNTT
             InitializeComponent();
         }
 
-        XLPhieuMuon tblPhieuMuon;
         BindingManagerBase DSPM;
-        SqlDataAdapter daPM;
+        DataTable tblSachQuaHan;
 
         private void frmThongKeSach_Load(object sender, EventArgs e)
         {
@@ -52,25 +51,54 @@ namespace DoAn_QLTVSachCNTT
             chSach.Series["Số Lượng Sách"].Points.AddXY("Còn Lại", txtSLConLai.Text);
             chSach.Series["Số Lượng Sách"].Points.AddXY("Quá Hạn", txtSachQuaHan.Text);
 
-            tblPhieuMuon = new XLPhieuMuon();
-            daPM = new SqlDataAdapter("Select * from PHIEUMUON", XLPhieuMuon.cnnStr);
+            string query = "select PHIEUMUON.MaPM,PHIEUMUON.MaDG,CTPHIEUMUON.MaSach,SACH.TenSach,CTPHIEUMUON.SoLuong,datediff(day,PHIEUMUON.NgayTra,GETDATE()) as SoNgayQH from PHIEUMUON inner join CTPHIEUMUON on PHIEUMUON.MaPM = CTPHIEUMUON.MaPM inner join SACH on CTPHIEUMUON.MaSach = SACH.MaSach where PHIEUMUON.TrangThai = 'False' and datediff(day, PHIEUMUON.NgayTra, GETDATE())> 0";
+            tblSachQuaHan = new DataTable();
+            rdTheoMS.Checked = true;
+            SqlDataAdapter da = new SqlDataAdapter(query,XLBang.cnnStr);
             try
             {
-                daPM.Fill(tblPhieuMuon);
+                da.Fill(tblSachQuaHan);
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            DSPM = this.BindingContext[tblPhieuMuon];
+            DSPM = this.BindingContext[tblSachQuaHan];
             dgvDSSQH.AutoGenerateColumns = false;
-            dgvDSSQH.DataSource = tblPhieuMuon;
+            dgvDSSQH.DataSource = tblSachQuaHan;
         }
 
         private void dgvDSSQH_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow r in dgvDSSQH.Rows)
                 r.Cells[0].Value = r.Index + 1;
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (rdTheoMS.Checked == true)
+            {
+                string std = string.Format("MaSach like '%{0}%'", txtTimKiem.Text);
+                tblSachQuaHan.DefaultView.RowFilter = std;
+            }
+            else
+            {
+                string std = string.Format("TenSach like '%{0}%'", txtTimKiem.Text);
+                tblSachQuaHan.DefaultView.RowFilter = std;
+            }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (dgvDSSQH.RowCount == 1)
+            {
+                MessageBox.Show("Không có thông tin dữ liệu cần tìm!!!");
+            }
+        }
+
+        private void txtTimKiem_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtTimKiem.Text = "";
         }
     }
 }

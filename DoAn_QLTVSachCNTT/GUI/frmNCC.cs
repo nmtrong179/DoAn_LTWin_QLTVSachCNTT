@@ -152,7 +152,7 @@ namespace DoAn_QLTVSachCNTT
             }
             catch
             {
-                MessageBox.Show("Nhà cung cấp đã tồn tại!");
+                MessageBox.Show("Cập nhật thất bại!");
                 txtMaNCC.Focus();
             }
         }

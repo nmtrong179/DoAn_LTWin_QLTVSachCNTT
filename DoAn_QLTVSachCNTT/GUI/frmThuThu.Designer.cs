@@ -273,6 +273,7 @@
             this.pThuThu.Location = new System.Drawing.Point(6, 25);
             this.pThuThu.Name = "pThuThu";
             this.pThuThu.Size = new System.Drawing.Size(136, 134);
+            this.pThuThu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pThuThu.TabIndex = 26;
             this.pThuThu.TabStop = false;
             // 

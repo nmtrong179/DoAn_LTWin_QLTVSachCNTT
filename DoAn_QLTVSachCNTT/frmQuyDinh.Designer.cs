@@ -190,7 +190,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "frmQuyDinh";
-            this.Text = "frmQuyDinh";
+            this.Text = "Quy Định Chung";
             this.ResumeLayout(false);
             this.PerformLayout();
 

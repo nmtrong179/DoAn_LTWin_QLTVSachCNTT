@@ -1,6 +1,6 @@
 ﻿namespace DoAn_QLTVSachCNTT
 {
-    partial class frmDSSach
+    partial class frmDSDG
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rptvDSSach = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.rptvDSDG = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // rptvDSSach
+            // rptvDSDG
             // 
-            this.rptvDSSach.ActiveViewIndex = -1;
-            this.rptvDSSach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rptvDSSach.Cursor = System.Windows.Forms.Cursors.Default;
-            this.rptvDSSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rptvDSSach.Location = new System.Drawing.Point(0, 0);
-            this.rptvDSSach.Name = "rptvDSSach";
-            this.rptvDSSach.Size = new System.Drawing.Size(800, 450);
-            this.rptvDSSach.TabIndex = 0;
+            this.rptvDSDG.ActiveViewIndex = -1;
+            this.rptvDSDG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rptvDSDG.Cursor = System.Windows.Forms.Cursors.Default;
+            this.rptvDSDG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rptvDSDG.Location = new System.Drawing.Point(0, 0);
+            this.rptvDSDG.Name = "rptvDSDG";
+            this.rptvDSDG.Size = new System.Drawing.Size(800, 450);
+            this.rptvDSDG.TabIndex = 0;
             // 
-            // frmDSSach
+            // frmDSDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.rptvDSSach);
-            this.Name = "frmDSSach";
-            this.Text = "Danh Sách Sách";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmDSSach_Load);
+            this.Controls.Add(this.rptvDSDG);
+            this.Name = "frmDSDG";
+            this.Text = "frmDSDG";
+            this.Load += new System.EventHandler(this.frmDSDG_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer rptvDSSach;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer rptvDSDG;
     }
 }

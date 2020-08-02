@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rptvDSNV);
             this.Name = "frmDSNV";
-            this.Text = "frmDSNV";
+            this.Text = "Danh Sách Nhân Viên";
             this.Load += new System.EventHandler(this.frmDSNV_Load);
             this.ResumeLayout(false);
 

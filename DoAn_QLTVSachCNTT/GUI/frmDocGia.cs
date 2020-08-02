@@ -161,13 +161,13 @@ namespace DoAn_QLTVSachCNTT
                 DSDG.EndCurrentEdit();
                 daDocGia.Update(tblDocGia);
                 tblDocGia.AcceptChanges();
-                MessageBox.Show("Thêm độc giả thành công!");
+                MessageBox.Show("Cập nhật thành công!");
                 capNhat = false;
                 enabledButton();
             }
             catch
             {
-                MessageBox.Show("Độc giả đã tồn tại!");
+                MessageBox.Show("Cập nhật thất bại!");
                 txtMaDG.Focus();
             }
         }
@@ -175,6 +175,13 @@ namespace DoAn_QLTVSachCNTT
         private void rdNam_CheckedChanged(object sender, EventArgs e)
         {
             rdNu.Checked = !rdNam.Checked;
+        }
+
+        private void btnInDSDG_Click(object sender, EventArgs e)
+        {
+            frmDSDG f = new frmDSDG();
+            f.WindowState = FormWindowState.Maximized;
+            f.Show();
         }
     }
 }

@@ -115,6 +115,7 @@ namespace DoAn_QLTVSachCNTT
         private void btnSua_Click(object sender, EventArgs e)
         {
             capNhat = true;
+            txtMaTT.Enabled = false;
             enabledButton();
         }
 
@@ -157,13 +158,13 @@ namespace DoAn_QLTVSachCNTT
                 DSNV.EndCurrentEdit();
                 daNhanVien.Update(tblNhanVien);
                 tblNhanVien.AcceptChanges();
-                MessageBox.Show("Thêm thủ thư thành công!");
+                MessageBox.Show("Cập nhật thành công!");
                 capNhat = false;
                 enabledButton();
             }
             catch
             {
-                MessageBox.Show("Thủ Thư đã tồn tại hoặc trùng ID!");
+                MessageBox.Show("Cập nhật thất bại");
                 txtMaTT.Focus();
             }
         }

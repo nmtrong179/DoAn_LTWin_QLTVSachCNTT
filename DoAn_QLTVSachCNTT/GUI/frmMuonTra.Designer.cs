@@ -45,7 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gThaoTac = new System.Windows.Forms.GroupBox();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnIn = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnTraSach = new DevExpress.XtraEditors.SimpleButton();
             this.btnGiaHan = new DevExpress.XtraEditors.SimpleButton();
             this.btnLapPhieu = new DevExpress.XtraEditors.SimpleButton();
@@ -215,7 +215,7 @@
             // gThaoTac
             // 
             this.gThaoTac.Controls.Add(this.btnSua);
-            this.gThaoTac.Controls.Add(this.btnIn);
+            this.gThaoTac.Controls.Add(this.btnXoa);
             this.gThaoTac.Controls.Add(this.btnTraSach);
             this.gThaoTac.Controls.Add(this.btnGiaHan);
             this.gThaoTac.Controls.Add(this.btnLapPhieu);
@@ -237,16 +237,16 @@
             this.btnSua.Size = new System.Drawing.Size(143, 51);
             this.btnSua.TabIndex = 13;
             this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // btnIn
+            // btnXoa
             // 
-            this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.ImageOptions.Image")));
-            this.btnIn.Location = new System.Drawing.Point(164, 30);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(143, 51);
-            this.btnIn.TabIndex = 12;
-            this.btnIn.Text = "In";
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(164, 30);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(143, 51);
+            this.btnXoa.TabIndex = 12;
+            this.btnXoa.Text = "Xoá";
             // 
             // btnTraSach
             // 
@@ -482,7 +482,7 @@
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnLapPhieu;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
-        private DevExpress.XtraEditors.SimpleButton btnIn;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnTraSach;
         private DevExpress.XtraEditors.SimpleButton btnGiaHan;
         private System.Windows.Forms.DateTimePicker dtTra;

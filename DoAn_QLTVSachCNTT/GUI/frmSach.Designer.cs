@@ -109,6 +109,7 @@
             this.pSach.Location = new System.Drawing.Point(9, 25);
             this.pSach.Name = "pSach";
             this.pSach.Size = new System.Drawing.Size(133, 134);
+            this.pSach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pSach.TabIndex = 19;
             this.pSach.TabStop = false;
             // 

@@ -63,11 +63,11 @@ namespace DoAn_QLTVSachCNTT
                             soLanDN[i] = 0;
                         }
                     }
-                    fMain.id = r[0]["ID"].ToString();
+                    clTruyenDL.id = r[0]["ID"].ToString();
                     tblNhanVien = new XLNhanVien();
-                    var k = tblNhanVien.Select("ID='" + fMain.id +"'");
+                    var k = tblNhanVien.Select("ID='" + clTruyenDL.id +"'");
                     fMain.Text = "Quản Lý Thư Viện Sách CNTT J2Team - Xin Chào "+k[0]["HoTenNV"];
-                    fMain.matKhau = r[0]["MatKhau"].ToString();
+                    clTruyenDL.matKhau = r[0]["MatKhau"].ToString();
                     fMain.enableControl((int)r[0]["LoaiTK"]);
                     this.Close();
                 }

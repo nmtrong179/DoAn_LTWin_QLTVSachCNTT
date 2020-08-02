@@ -21,8 +21,6 @@ namespace DoAn_QLTVSachCNTT
         {
             InitializeComponent();
         }
-        //bien toan cuc
-        public string matKhau,id;
         //XU ly phan quyen
         public void enableControl(int LoaiTK)
         {
