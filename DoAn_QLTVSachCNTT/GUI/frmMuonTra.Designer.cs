@@ -38,7 +38,6 @@
             this.dtTra = new System.Windows.Forms.DateTimePicker();
             this.dtMuon = new System.Windows.Forms.DateTimePicker();
             this.cbMaDG = new System.Windows.Forms.ComboBox();
-            this.cbMaPM = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@
             this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtMaPM = new System.Windows.Forms.TextBox();
             this.gTTPM.SuspendLayout();
             this.gThaoTac.SuspendLayout();
             this.gTimKiem.SuspendLayout();
@@ -74,6 +74,7 @@
             // 
             // gTTPM
             // 
+            this.gTTPM.Controls.Add(this.txtMaPM);
             this.gTTPM.Controls.Add(this.rdChuaTra);
             this.gTTPM.Controls.Add(this.rdDaTra);
             this.gTTPM.Controls.Add(this.label9);
@@ -82,7 +83,6 @@
             this.gTTPM.Controls.Add(this.dtTra);
             this.gTTPM.Controls.Add(this.dtMuon);
             this.gTTPM.Controls.Add(this.cbMaDG);
-            this.gTTPM.Controls.Add(this.cbMaPM);
             this.gTTPM.Controls.Add(this.label6);
             this.gTTPM.Controls.Add(this.label5);
             this.gTTPM.Controls.Add(this.label2);
@@ -167,14 +167,6 @@
             this.cbMaDG.Name = "cbMaDG";
             this.cbMaDG.Size = new System.Drawing.Size(175, 26);
             this.cbMaDG.TabIndex = 7;
-            // 
-            // cbMaPM
-            // 
-            this.cbMaPM.FormattingEnabled = true;
-            this.cbMaPM.Location = new System.Drawing.Point(140, 43);
-            this.cbMaPM.Name = "cbMaPM";
-            this.cbMaPM.Size = new System.Drawing.Size(175, 26);
-            this.cbMaPM.TabIndex = 6;
             // 
             // label6
             // 
@@ -446,6 +438,13 @@
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.Width = 70;
             // 
+            // txtMaPM
+            // 
+            this.txtMaPM.Location = new System.Drawing.Point(140, 43);
+            this.txtMaPM.Name = "txtMaPM";
+            this.txtMaPM.Size = new System.Drawing.Size(175, 24);
+            this.txtMaPM.TabIndex = 17;
+            // 
             // frmMuonTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -488,7 +487,6 @@
         private System.Windows.Forms.DateTimePicker dtTra;
         private System.Windows.Forms.DateTimePicker dtMuon;
         private System.Windows.Forms.ComboBox cbMaDG;
-        private System.Windows.Forms.ComboBox cbMaPM;
         private System.Windows.Forms.GroupBox gTimKiem;
         private DevExpress.XtraEditors.SimpleButton btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
@@ -509,5 +507,6 @@
         private System.Windows.Forms.RadioButton rdChuaTra;
         private System.Windows.Forms.ComboBox cbMaNV;
         private DevExpress.XtraEditors.SimpleButton btnSua;
+        private System.Windows.Forms.TextBox txtMaPM;
     }
 }

@@ -39,8 +39,9 @@ namespace DoAn_QLTVSachCNTT
             gTimKiem.Enabled = !capNhat;
             btnLuu.Enabled = capNhat;
             btnHuy.Enabled = capNhat;
-            btnXoa.Enabled = capNhat;
+            btnXoa.Enabled = !capNhat;
             dgvDSPM.Enabled = !capNhat;
+            btnSua.Enabled = !capNhat;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -68,7 +69,6 @@ namespace DoAn_QLTVSachCNTT
             rdTheoMaDG.Checked = true;
             loadDocGia();
             loadNhanVien();
-            loadPhieuMuon();
             daPhieuMuon = new SqlDataAdapter("Select * from PHIEUMUON", XLPhieuMuon.cnnStr);
             daCTPhieuMuon = new SqlDataAdapter("Select * from CTPHIEUMUON", XLCTPhieuMuon.cnnStr);
             daDocGia = new SqlDataAdapter("Select * from DOCGIA", XLDocGia.cnnStr);
@@ -86,7 +86,7 @@ namespace DoAn_QLTVSachCNTT
 
             cbMaDG.DataBindings.Add("SelectedValue", tblPhieuMuon, "MaDG", true);
             cbMaNV.DataBindings.Add("SelectedValue", tblPhieuMuon, "MaNV", true);
-            cbMaPM.DataBindings.Add("SelectedValue", tblPhieuMuon, "MaPM", true);
+            txtMaPM.DataBindings.Add("text", tblPhieuMuon, "MaPM", true);
             dtMuon.DataBindings.Add("text", tblPhieuMuon, "NgayMuon", true);
             dtTra.DataBindings.Add("text", tblPhieuMuon, "NgayTra", true);
             rdDaTra.DataBindings.Add("checked", tblPhieuMuon, "TrangThai", true);
@@ -136,7 +136,7 @@ namespace DoAn_QLTVSachCNTT
                     catch
                     {
                         MessageBox.Show("Trả sách thất bại!");
-                        cbMaPM.Focus();
+                        txtMaPM.Focus();
                     }
                 }
             }
@@ -151,7 +151,7 @@ namespace DoAn_QLTVSachCNTT
         {
             if (MessageBox.Show("Bạn Có Chắc Muốn Gia Hạn ?", "Thông Báo Gia Hạn", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string x = "Select DateAdd(day,10,NgayTra) from PHIEUMUON where MaPM='" + cbMaPM.Text + "' and TrangThai='False'";
+                string x = "Select DateAdd(day,10,NgayTra) from PHIEUMUON where MaPM='" + txtMaPM.Text + "' and TrangThai='False'";
                 var y = XLPhieuMuon.Thuc_hien_lenh_tinh_toan(x);
                 if (y == null)
                 {
@@ -172,7 +172,7 @@ namespace DoAn_QLTVSachCNTT
                     catch
                     {
                         MessageBox.Show("Gia hạn thất bại!");
-                        cbMaPM.Focus();
+                        txtMaPM.Focus();
                     }
                 }
             }
@@ -208,7 +208,7 @@ namespace DoAn_QLTVSachCNTT
             catch
             {
                 MessageBox.Show("Cập nhật thất bại!");
-                cbMaPM.Focus();
+                txtMaPM.Focus();
             }
         }
 
@@ -219,7 +219,7 @@ namespace DoAn_QLTVSachCNTT
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            cbMaPM.Enabled = false;
+            txtMaPM.Enabled = false;
             capNhat = true;
             enabledButton();
         }
@@ -230,14 +230,6 @@ namespace DoAn_QLTVSachCNTT
             tblPhieuMuon.RejectChanges();
             capNhat = false;
             enabledButton();
-        }
-
-
-        private void loadPhieuMuon()
-        {
-            cbMaPM.DataSource = tblPhieuMuon;
-            cbMaPM.ValueMember = "MaPM";
-            cbMaPM.DisplayMember = "MaPM";
         }
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
